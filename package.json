@@ -1,9 +1,9 @@
 {
-  "name": "@varya/into-design-systems-2021",
+  "name": "@varya/devtalks-2021",
   "version": "1.0.0",
   "description": "Design system: from bookkeeping to championing",
   "main": "index.js",
-  "repository": "https://github.com/varya/into-design-systems-2021.git",
+  "repository": "https://github.com/varya/devtalks-2021.git",
   "author": "Varya Stepanova",
   "license": "MIT",
   "scripts": {
