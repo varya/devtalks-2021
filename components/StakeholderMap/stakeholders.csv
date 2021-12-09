@@ -1,0 +1,56 @@
+name,team,sub_team,title,responsibility,parent,organization
+ToniLaine;Supervisor,,supervisor,,Elisa,Supervisor
+Mikko Häkkinen,Design System,,Head of Design Language,,Supervisor,SoSe
+Pekka Ruuska,Design System,,developer,,Supervisor,SoSe
+Varya Stepanova,Design System,,developer,,Supervisor,SoSe
+Miko Hiltunen,Design System,,designer,,Supervisor,SoSe
+Tuuli Leppäaho,Viihde,Team 1,product owner,,Design System,HY
+Joris-Jan van den Boom,Viihde,Team 1,designer,apps,Design System,HY
+Ari Salokannel,Viihde,Team 2,designer,apps,Design System,HY
+Miika Ruissalo,Viihde,Team 2,designer,web,Design System,HY
+VietBa Hirvonen,Viihde,Team 2,junior service designer,,Design System,HY
+Petri Lamberg,Kirja,,scrum master,,Design System,HY
+Sami Keinänen,Kirja,,designer,,Design System,HY
+Jaakko Kuokkanen,OmaElisa,,product owner,,Design System,HY
+Jaana Keinänen,OmaElisa,,technical product owner,,Design System,HY
+Tuire Peurala,OmaElisa,,designer,,Design System,HY
+Jyri Nikkanen,OmaElisa,,designer,,Design System,HY
+Tapio Teräs,OmaElisa,,developer,DS contact,Design System,HY
+Mikko Vestola,OmaElisa,,lead developer,,Design System,HY
+Antti Metso,Sales,,product owner,,Design System,HY
+Sanna Valkeasuo,Sales,,technical product owner,,Design System,HY
+Melina Kukkasela,Sales,,designer,,Design System,HY
+Yaroslav Tsaruk,Sales,,architect,,Design System,HY
+Edvard Fonsell,Sales,,developer,,Design System,HY
+Esko Kokkonen,Sales,,developer,,Design System,HY
+Jonas Berlin,Sales,,developer,,Design System,HY
+Juha Pääjärvi,Sales,,developer,,Design System,HY
+Teemu Peltonen,Sales,,developer,,Design System,HY
+Joni Kautto,Sales,,SEO consultant,,Design System,HY
+Antero Hytönen,Sales,,tester,,Design System,HY
+Petri Grönlund,Sites,,product owner,,Design System,HY
+Pyry Ahlfors,Sites,,designer,,Design System,HY
+Jouni Hopia,Ring,,team lead,,Design System,YA
+Antti Lavio,Ring,,designer,,Design System,YA
+Joosep Laht,Ring,,designer,mobile UI kit,Design System,YA
+Jani Rantanen,Online First,,product owner,,Design System,YA
+Miko Hiltunen,Online First,,designer,,Design System,YA
+Tapio Kukkonen,Online First,,developer,,Design System,YA
+Jesse Enqvist,PHS,,designer,,Design System,HY
+Jaakko Raami,ElisaID,,designer,,Design System,HY
+Johanna Koho,Aisti,,designer,,Design System,YA
+Veli-Matti Pokela,Aisti,,designer,,Design System,YA
+Antti Hämäläinen,Aisti,,service architect,,Design System,YA
+Raquel Nieto,Automate,,designer,,Design System,YA
+Santeri Toikka,Automate,,lead developer,,Design System,YA
+Toivo Vaje,Automate,,???,,Design System,YA
+Hervé Denis,Automate,,senior test automation engineer,Virtual NOC,Design System,YA
+Jonna Rantanen,OmniChannel,,team lead,,Design System,YA
+Jouni Petrow,Corporate CX,,team lead,,Design System,YA
+Annika Berg,User Insights,,team lead,,Design System,YA
+Hien Nguyen,SmartFactory,,software developer,tehtaiden mallinnus ja huolto 3D:nä,Design System,YA
+Vu Dung,SmartFactory,,software developer,tehtaiden mallinnus ja huolto 3D:nä,Design System,YA
+??? ???,Growth Hack,,,,Design System,HY
+Pasi Seppänen,ITBU,,designer,,Design System,YA
+Anders Borgström,ITBU,,developer,,Design System,YA
+Teppo Huttunen,ITBU,,,,Design System,YA

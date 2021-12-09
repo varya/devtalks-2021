@@ -1,0 +1,888 @@
+---
+title: "Design system: from bookkeeping to championing"
+subtitle: How an impact measuring tool turned into a stakeholder management system
+# Incude global styles here
+style: >
+  body {
+    margin: 0
+  }
+  .slide.slide--highlighted h3 {
+    color: white;
+  }
+  .no-title h2 {
+    display: none;
+  }
+  .slide .shout.shout--small {
+    font-size: 90px;
+  }
+  .slide h2.shout--highlighted {
+    color: #38bcc2;
+  }
+  .timeline {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+    margin-top: 100px;
+  }
+  .timeline__item {
+    position: relative;
+
+    background: transparent;
+    padding: 5px;
+    width: 255px;
+    height: 255px;
+    margin: 5px;
+
+    border: tomato 3px solid;
+    
+    line-height: 100px;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+  }
+  .timeline__item-name {
+    position: absolute;
+    top: -16px;
+    left: 75px;
+
+    width: 100px;
+
+    font-size: 24px;
+    line-height: 32px;
+
+    background: white;
+    border: tomato 3px solid;
+  }
+  .timeline__item--position-1 {
+    order: 1;
+  }
+  .timeline__item--position-2 {
+    order: 2;
+  }
+  .timeline__item--position-3 {
+    order: 3;
+  }
+  .slide h2.shout--rainbow {
+    /* Chrome, Safari, Opera */
+    -webkit-animation: rainbow 5s infinite; 
+    
+    /* Internet Explorer */
+    -ms-animation: rainbow 5s infinite;
+    
+    /* Standar Syntax */
+    animation: rainbow 5s infinite; 
+  }
+  /* Chrome, Safari, Opera */
+  @-webkit-keyframes rainbow{
+    0%{color: orange;}	
+    10%{color: purple;}	
+    20%{color: red;}
+    30%{color: CadetBlue;}
+    40%{color: yellow;}
+    50%{color: coral;}
+    60%{color: green;}
+    70%{color: cyan;}
+    80%{color: DeepPink;}
+    90%{color: DodgerBlue;}
+    100%{color: orange;}
+  }
+
+  /* Internet Explorer */
+  @-ms-keyframes rainbow{
+    0%{color: orange;}	
+    10%{color: purple;}	
+    20%{color: red;}
+    30%{color: CadetBlue;}
+    40%{color: yellow;}
+    50%{color: coral;}
+    60%{color: green;}
+    70%{color: cyan;}
+    80%{color: DeepPink;}
+    90%{color: DodgerBlue;}
+    100%{color: orange;}
+  }
+
+  /* Standar Syntax */
+  @keyframes rainbow{
+      0%{color: orange;}	
+    10%{color: purple;}	
+    20%{color: red;}
+    30%{color: CadetBlue;}
+    40%{color: yellow;}
+    50%{color: coral;}
+    60%{color: green;}
+    70%{color: cyan;}
+    80%{color: DeepPink;}
+    90%{color: DodgerBlue;}
+    100%{color: orange;}
+  }
+# Include footer content here or remove it
+footer: >
+  <footer class="badge">
+      <a href="https://github.com/varya/into-design-systems-2021" target="_blank" rel="noopener">Fork me on GitHub</a>
+  </footer>
+# Include data for generating meta tags
+meta:
+  description: >
+    Shower presentation generator with support of MDX syntax, powered with Next.js
+  cover: ./pictures/cover.jpg
+  author: Shower
+  website: https://github.com/varya/shower-mdx
+  twitter: username
+---
+
+
+
+
+## Design system
+{#cover}
+
+### from bookkeeping to championing
+
+_How an impact measuring tool turned into a stakeholder management system_
+
+<style>{`
+      #cover h2 {
+        margin: 30px 0 0;
+        text-align: center;
+        font-size: 70px;
+      }
+
+      #cover p {
+        margin: 10px 0 0;
+        text-align: center;
+        font-style: italic;
+        font-size: 20px;
+      }
+
+      #cover p a {
+        color: white;
+      }
+`}</style>
+
+## About myself
+
+
+## What the talk is about
+
+
+## +1 dev
+{ .slide--shout .slide--highlighted }
+
+## How we asked for +1 dev
+
+<!--
+TODO: IT Crowd picture, e.g. https://i.ytimg.com/vi/l316YBP9Gd0/maxresdefault.jpg
+-->
+
+
+## Actually
+
+* The value of design system is not clear
+* Business has no idea what we are doing
+* DS team operates feelings not numbers
+
+## Growing from seed
+{ .no-title }
+
+<Cover src="pictures/seed.jpg" alt=""/>
+
+<!--
+This grew into much bigger
+-->
+
+## Measuring a design system
+{ .slide--shout .slide--highlighted }
+### Why? What? How?
+
+
+## When?
+{ .slide--shout .slide--primary }
+
+<!-- Where do we focus? When? -->
+
+
+## Timeline
+{ .no-title }
+
+<div class="timeline">
+  <div class="timeline__item timeline__item--position-2 next">
+    <div class="timeline__item-name">present</div>
+  </div>
+  <div class="timeline__item timeline__item--position-1 next">
+    <div class="timeline__item-name">past</div>
+  </div>
+  <div class="timeline__item timeline__item--position-3 next">
+    <div class="timeline__item-name">future</div>
+  </div>
+</div>
+
+<!--
+
+TODO: put icons
+
+To get an idea of what we should do now, we
+have to analyse our past and imagine what we anim
+in the future.
+
+-->
+
+<!-- TODO: fix styled components
+<timeline__item>
+present
+</timeline__item>
+-->
+
+
+## Measuring production costs
+{ .slide--shout }
+
+### to reflect, how easier (and more cost-effective) the life is for the projects
+
+<!--
+TODO: "past" badge
+-->
+
+
+## Costs and savings
+
+* Component is made only once
+* Component needs to be integrated
+* Component needs to be supported
+* We support only one component
+
+
+## Costs formula, per component
+
+### How much a component costs
+```
+$ = production time
+    + (support costs * component lifetime)
+    + (integration time * amount of projects)
+```
+
+### Without design system
+```
+$ = (
+    production time + (support costs * component lifetime)
+  ) * amount of projects
+```
+
+## Costs formula, whole system
+
+<iframe width="100%" height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRS34KLVMHporg-AAxzVYbjXX2GS-DhgKDRUqk4EwiGNnXdow2DFg7EufwwUQj3_L_HV11Y83rJbmba/pubhtml?widget=true&amp;headers=false"></iframe>
+
+### Cost savings: 752 hours = 18.8 weeks = 4 months
+
+## How to get the data?
+
+* Survey
+* Figma statistics / API
+* GitHub Search / API
+* Code analysators
+
+
+## Measuring the past
+
+### 1. Production costs
+{ style="margin-bottom: 1.5em;" }
+
+### 2. Availability of a design system
+How easy to start? How fast are updates? Quality of documenttaion. Level
+    of support needed.
+
+### 3. Involvement and contributions
+Design system's acceptance. Level of contributions.
+
+
+## Measuring the process of DS
+
+### to reflect, how DS resources are used and if they correspond to the workload
+
+<!--
+TODO: "future" badge
+-->
+
+
+## Workload estimation
+
+* Learn backlog capacity. "Compund" number, can be obtained from JIRA, GitHub issues, etc.
+* Apply given resources
+
+
+## Let's count our chickens
+
+<iframe width="100%" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTamHd42yH8laeAlPRBxvF7w6BKs_RTx_jCo0wT0v07DsTS76o5sDdCHFmJc2fiSamvC-s8-71_rlqs/pubhtml?widget=true&amp;headers=false"></iframe>
+
+
+## With numbers, we can
+
+* Set up goals
+* Build hypothesis
+* Validate
+
+
+## Measuring the reality
+{ .slide--shout }
+
+### To get instant guidance towards right direction
+
+<!--
+TODO: "present" badge
+-->
+
+
+## Same data
+{ .slide--shout .slide--highlighted }
+### But instantly available
+
+
+## Where to store the data?
+
+* Company wiki
+* Website
+* Documenting system
+
+### didn't work
+{ .next }
+
+
+## Shared office solutions
+
+* Excel (cloud)
+* Google Sheets
+
+
+## Stakeholders
+{ .slide--shout .slide--primary-light }
+
+## Stakeholder map in React
+
+TODO: Example from website
+
+
+## Stakeholders in teams
+
+<iframe width="100%" height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTc_0pL0CmHsQCRuZVZd6Dr8SWjK174-WMO-6IywmuXUaqm5j6-xEqXOpkQuPU5sU-bJ53GiGZo90jF/pubhtml?widget=true&amp;headers=false"></iframe>
+
+### 💡 Color-coded based on the recent survey
+
+## Stakeholders on business levels
+
+<iframe width="100%" height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQNr6G8yo0MPrU1sLKmi1a4q_K7HhR3VhQM0vEwigM6JwIW2NLWkpm0hDPYSkMghYvj1tXQOVlqpJ_6/pubhtml?widget=true&amp;headers=false"></iframe>
+
+
+## How design system is doing?
+
+<iframe width="100%" height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT9v94Dv2v5lWBvRl6kCw5GfDX-pYupK9XeOaB7TJQgLE_6AUrc-O9ILidl76QL18h8jfxSUz93VElm/pubhtml?widget=true&amp;headers=false"></iframe>
+
+Example link: http://bit.ly/ds-matrix-example
+
+
+## Workflows
+{ .slide--shout .slide--highlighted }
+
+## Workflow examples
+
+* Library has critical updates
+* Someone doesn't update from old version
+* Ask teams about upcoming changes
+* Search for contributors
+
+
+## Link data and people
+
+<iframe width="100%" height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT9v94Dv2v5lWBvRl6kCw5GfDX-pYupK9XeOaB7TJQgLE_6AUrc-O9ILidl76QL18h8jfxSUz93VElm/pubhtml?widget=true&amp;headers=false"></iframe>
+
+## Why? What? How? For whom?
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xlxqbf4s8Tk" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+
+Text version: [Design systems are for people](https://publication.design.systems/design-systems-are-for-people-a484620b6988)
+
+## Why? What? How? For whom?
+
+<Blockquote caption={
+  <>
+    Magera Moon,&nbsp;
+    <a href="https://publication.design.systems/design-systems-are-for-people-a484620b6988">
+      The people part of design systems
+    </a>
+  </>
+}>
+Making design systems successful is just as much about creating a people system as it is about creating a technical or operational one.
+</Blockquote>
+
+## Why? What? How? For whom?
+
+<Blockquote caption={
+  <>
+    Ryan DeBeasi,&nbsp;
+    <a href="https://www.smashingmagazine.com/2019/10/design-systems-relationships/">
+      Design Systems Are About Relationships
+    </a>
+  </>
+}>
+To build a design system, don’t start by writing code and choosing tools; <b>start by talking to the people who will use the system</b>. Learn about their needs and constraints, and help them solve problems.
+</Blockquote>
+
+## To boost<br/>a&nbsp;design system {.shout .shout--small .shout--highlighted }
+
+## focus on people {.shout .shrink}
+
+## listen to them {.shout .shrink}
+
+## connect {.shout .shout--rainbow .shrink}
+
+<!--
+TODO: Chnage the rainbow
+-->
+
+
+## Thank you
+
+TODO: add my info
+
+
+
+
+## old slides
+
+
+
+## Why to measure?
+
+* Design system needs to prove its business value to the upper levels. If
+the value is measurable, it can result into better management of resources.
+* Design system team needs confirmation if they are doing the right thing.
+* Design system team needs to correct its plans according to instant measurements
+and dynamic picture. 
+
+## Valuable for different levels
+
+* (B) Measuring business value
+  What is important for the business levels to know
+* (P) Measuring system-project interactions
+  How good the design system is for its users
+* (I) Internal measuring
+  Workload, internal costs, etc
+
+
+## What exactly you can measure?
+
+| What?         | Why?       | How? 
+| ---              | ---         | ---
+| Production costs     |  | 
+| Availability of the design system | | 
+| Involvement and contributions        |  | 
+| Quality of DS        |  | 
+| The process        |  | 
+
+
+## Measuring production costs
+{ .slide--shout }
+
+### to reflect, how easier (and more cost-effective) the life is for the projects
+
+
+## Costs and savings
+
+* Component is made only once
+* Component needs to be integrated
+* Component needs to be supported
+* We support only one component
+
+
+## Costs formula, per component
+
+### How much a component costs
+```
+$ = production time
+    + (support costs * component lifetime)
+    + (integration time * amount of projects)
+```
+
+### Without design system
+```
+$ = (
+    production time + (support costs * component lifetime)
+  ) * amount of projects
+```
+
+## Costs formula, whole system
+
+<iframe width="100%" height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRS34KLVMHporg-AAxzVYbjXX2GS-DhgKDRUqk4EwiGNnXdow2DFg7EufwwUQj3_L_HV11Y83rJbmba/pubhtml?widget=true&amp;headers=false"></iframe>
+
+### Cost savings: 752 hours = 18.8 weeks = 4 months
+
+## How to get the data?
+
+* Survey
+* Figma statistics / API
+* GitHub Search / API
+* Code analysators
+
+
+## What? Why? How?
+{: .no-title }
+
+TODO: Fill the table, add B,P,I levels
+
+## Measuring availability of DS
+
+### to reflect, how handy it is to use the design system
+
+## How easy it is to start using the design system?
+
+* Surveys
+* Snapshots of "costs"
+
+## How fast are updates?
+
+* Crawl project repositories weekly and detect the versions of libraries used
+* Crawl sites in production and detect the versions of libraries used
+* Inject into continious integration to get the data
+* Store the logs of these crawls and build graphs
+
+
+## Measuring involvement into DS
+
+### to reflect, how much collective resources are being used
+
+## Measure the acceptance
+
+= same data as we searched for fast updates
+
+## Measure level of contributions
+
+* Features and fixes made by contributors
+* Amount of PRs
+  by person, by teams
+* Design impact
+
+
+## Measuring quality of DS
+
+### to reflect, how good it is
+
+
+## Measuring the process of DS
+
+### to reflect, how DS resources are used and if they correspond to the workload
+
+## Workload estimation
+
+* Learn backlog capacity. "Compund" number, can be obtained from JIRA, GitHub issues, etc.
+* Apply given resources
+
+
+## Let's count our chickens
+
+<iframe width="100%" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTamHd42yH8laeAlPRBxvF7w6BKs_RTx_jCo0wT0v07DsTS76o5sDdCHFmJc2fiSamvC-s8-71_rlqs/pubhtml?widget=true&amp;headers=false"></iframe>
+
+
+## With numbers, we can
+
+* Set up goals
+* Build hypothesis
+* Validate
+
+
+## Operate the data
+{ .slide--shout .slide--primary }
+
+
+## Where to store the data?
+
+* Company wiki
+* Website
+* Documenting system
+
+### didn't work
+{ .next }
+
+
+## Shared office solutions
+
+* Excel (cloud)
+* Google Sheets
+
+## Sneak peek
+
+<iframe width="100%" height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT9v94Dv2v5lWBvRl6kCw5GfDX-pYupK9XeOaB7TJQgLE_6AUrc-O9ILidl76QL18h8jfxSUz93VElm/pubhtml?widget=true&amp;headers=false"></iframe>
+
+Example link: http://bit.ly/ds-matrix-example
+
+## Data flow
+
+TODO: make a picture
+
+
+## Stakeholders
+{ .slide--shout .slide--primary-light }
+
+## Stakeholder map in React
+
+TODO: Example from website
+
+
+## Stakeholders in teams
+
+<iframe width="100%" height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTc_0pL0CmHsQCRuZVZd6Dr8SWjK174-WMO-6IywmuXUaqm5j6-xEqXOpkQuPU5sU-bJ53GiGZo90jF/pubhtml?widget=true&amp;headers=false"></iframe>
+
+### 💡 Color-coded based on the recent survey
+
+## Stakeholders on business levels
+
+<iframe width="100%" height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQNr6G8yo0MPrU1sLKmi1a4q_K7HhR3VhQM0vEwigM6JwIW2NLWkpm0hDPYSkMghYvj1tXQOVlqpJ_6/pubhtml?widget=true&amp;headers=false"></iframe>
+
+## Ecosystem?
+
+Schema of stakeholders and data flow
+
+## Link data and people
+
+<iframe width="100%" height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT9v94Dv2v5lWBvRl6kCw5GfDX-pYupK9XeOaB7TJQgLE_6AUrc-O9ILidl76QL18h8jfxSUz93VElm/pubhtml?widget=true&amp;headers=false"></iframe>
+
+## Why? What? How? For whom?
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xlxqbf4s8Tk" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+
+Text version: [Design systems are for people](https://publication.design.systems/design-systems-are-for-people-a484620b6988)
+
+## Why? What? How? For whom?
+
+<Blockquote caption={
+  <>
+    Magera Moon,&nbsp;
+    <a href="https://publication.design.systems/design-systems-are-for-people-a484620b6988">
+      The people part of design systems
+    </a>
+  </>
+}>
+Making design systems successful is just as much about creating a people system as it is about creating a technical or operational one.
+</Blockquote>
+
+## Why? What? How? For whom?
+
+<Blockquote caption={
+  <>
+    Ryan DeBeasi,&nbsp;
+    <a href="https://www.smashingmagazine.com/2019/10/design-systems-relationships/">
+      Design Systems Are About Relationships
+    </a>
+  </>
+}>
+To build a design system, don’t start by writing code and choosing tools; <b>start by talking to the people who will use the system</b>. Learn about their needs and constraints, and help them solve problems.
+</Blockquote>
+
+## To boost<br/>a&nbsp;design system {.shout .shout--small .shout--highlighted }
+
+## focus on people {.shout .shrink}
+
+## listen to them {.shout .shrink}
+
+## connect {.shout .shout--rainbow .shrink}
+
+<!--
+TODO: Chnage the rainbow
+-->
+
+
+## Workflows
+{ .slide--shout .slide--highlighted }
+
+## Workflow examples
+
+* Library has critical updates
+* Someone doesn't update from old version
+* Ask teams about upcoming changes
+* Search for contributors
+
+TODO: show on schema
+
+## Thank you
+
+TODO: add my info
+
+
+
+
+
+
+
+## IDEATION
+
+
+## What exactly you can measure?
+
+1. Brand
+1. Production costs
+1. Availability of the design system
+1. Involvement and contributions
+1. Quality of DS as a product
+1. The process
+
+## Measuring production costs
+to reflect, how easier (and cheaper) the life is for the projects
+
+
+## UI coverage
+* Make regular UI inventory for the sites and apps in production and measure the amount of patterns not from the libraries.
+* Express findings in numbers
+Use UI Coverage method from the research.
+
+
+## 
+
+
+
+## Convince the business
+{ .slide--shout .slide--primary }
+
+
+## Getting data
+{ .slide--shout .slide--primary-light }
+
+## Data tool
+
+## Managing the stakeholders
+
+
+## What is it?
+
+This is a project template which lets you create your beautiful [Shower](https://shwr.me/) presentations with markdown syntax and custom React components.
+
+The following slides demonstrate rendered HTML. Check [index.mdx](https://github.com/varya/shower-mdx/blob/master/index.mdx) to see how it looks in markdown.
+
+[Project repository](https://github.com/varya/shower-mdx)
+
+*Feedback and contributions are warmly welcomed!*
+
+
+## Shower key features
+
+1. Built on HTML, CSS and JavaScript
+1. Works in all modern browsers
+1. Themes are separated from engine
+1. Fully keyboard accessible
+1. Printable to PDF
+
+<p className="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+
+## Plain text on your slides
+
+Lorem ipsum dolor sit amet, consectetur [adipisicing](#4) elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, _quis nostrud_ exercitation ullamco laboris __nisi ut aliquip__ ex ea commodo consequat. Duis aute irure *dolor* in reprehenderit in voluptate velit esse cillum **dolore** eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in ```<culpa>``` qui officia deserunt mollit anim id est laborum.
+
+## Two columns if you like (or three, or four)
+
+<Columns col="2">
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+
+</Columns>
+
+## All kind of lists
+
+1. Simple lists are marked with bullets
+1. Ordered lists begin with a number
+1. You can even nest lists one inside another
+    * Or mix their types
+    * But do not go too far
+    * Otherwise audience will be bored
+1. Look, seven rows exactly!
+
+## Serious citations
+
+<Blockquote caption="Marcus Tullius Cicero">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+</Blockquote>
+
+## Code samples 1: simple code block with markdown syntax
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head> <!--Comment-->
+    <title>Shower</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="screen.css">
+</head>
+```
+
+## Code samples 2: Code component and custom jsx to highlight lines of code
+
+<Code>
+  {`<!DOCTYPE html>`}
+  <code className="mark">{`  <html lang="en">`} </code>
+  <mark>{`  <head> <!--Comment-->`}</mark>
+  {`     <title>Shower</title>`}
+  {`   <meta charset="UTF-8">`}
+  {`   <link rel="stylesheet" href="screen.css">`}
+  <mark>{`<title>Shower</title>`}</mark>
+</Code>
+
+## Even tables can be made in markdown.
+
+| Locavore         | Umami       | Helvetica | Vegan
+| ---              | ---         | ---       |---
+| **Fingerstache** | Kale        | Chips     | Keytar
+| **Sriracha**     | Gluten-free | Ennui     | Keffiyeh
+| **Thundercats**  | Jean        | Shorts    | Biodiesel
+| **Terry**        | Richardson  | Swag      | Blog
+
+It’s good to have information organized.
+
+## Pictures 
+{#picture}
+
+<Cover src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
+
+[© John Carey](http://fiftyfootshadows.net/)
+ 
+</Cover>
+
+<style>{`
+  #picture h2 {
+    color: white;
+  }
+`}</style>
+
+## You can even shout this way {.shout .shrink}
+
+
+## Inner navigation
+
+<InnerNav>
+
+  - Lets you reveal list items one by one
+  - To keep some key points
+  - In secret from audience
+  - But it will work only once
+  - Nobody wants to see the same joke twice
+
+</InnerNav>
+
+## 
+{#see-more}
+
+<h2 className="shout">
+  <img src="https://shwr.me/pictures/logo.svg" alt="Shower logo"/>
+  <a href="https://github.com/shower/shower">See more on GitHub</a>
+</h2>
+
+<style>{`
+  #see-more h2 {
+    font-size: 100px
+  }
+
+  #see-more img {
+    width: 0.72em;
+    height: 0.72em;
+  }
+`}</style>
+
+

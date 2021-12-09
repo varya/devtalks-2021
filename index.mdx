@@ -1,0 +1,1270 @@
+---
+title: "Increasing design system quality and adoption by proper stakeholder management"
+# subtitle: How an impact measuring tool turned into a stakeholder management system
+# Incude global styles here
+style: >
+  body {
+    margin: 0
+  }
+  .slide.slide--highlighted h3 {
+    color: white;
+  }
+  .no-title h2 {
+    display: none;
+  }
+  .slide .shout.shout--small {
+    font-size: 90px;
+  }
+  .slide h2.shout--highlighted {
+    color: #38bcc2;
+  }
+  .timeline {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+    margin-top: 100px;
+  }
+  .timeline__item {
+    position: relative;
+
+    background: transparent;
+    padding: 5px;
+    width: 255px;
+    height: 255px;
+    margin: 5px;
+
+    border: tomato 3px solid;
+    
+    line-height: 255px;
+    font-weight: bold;
+    font-size: 5em;
+    text-align: center;
+  }
+  .timeline__item-name {
+    position: absolute;
+    top: -16px;
+    left: 75px;
+
+    width: 100px;
+
+    font-size: 24px;
+    line-height: 32px;
+
+    background: white;
+    border: tomato 3px solid;
+  }
+  .timeline__item--position-1 {
+    order: 1;
+  }
+  .timeline__item--position-2 {
+    order: 2;
+  }
+  .timeline__item--position-3 {
+    order: 3;
+  }
+  .timeline__item-icon {
+    width: 150px;
+    margin: 52px;
+    margin-top: 45px;
+  }
+  .team-top {
+    animation-name: fade;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-direction: alternate;
+  }
+  @keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  .space-label {
+    width: 340px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    line-height: 1em;
+    transform: rotate(15deg);
+  }
+  .space-label .top,
+  .space-label .bottom {
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+    width: 170px;
+    margin: 0 auto;
+  }
+  .space-label .top .ring,
+  .space-label .bottom .ring {
+    border-radius: 100%;
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    border: 3px solid #999;
+    border-width: 8px;
+  }
+  .space-label .top .ring:nth-child(2),
+  .space-label .bottom .ring:nth-child(2) {
+    border-width: 4px;
+    width: 154px;
+  }
+  .space-label .top .ring:nth-child(3),
+  .space-label .bottom .ring:nth-child(3) {
+    border-width: 2px;
+    width: 139px;
+  }
+  .space-label .top .ring:nth-child(3):after,
+  .space-label .bottom .ring:nth-child(3):after {
+    content: "";
+    width: 18px;
+    position: absolute;
+    border-top: 1px solid #999;
+    left: 50%;
+    margin-left: -9px;
+  }
+  .space-label .top .ring:nth-child(3):before,
+  .space-label .bottom .ring:nth-child(3):before {
+    content: "";
+    width: 32px;
+    position: absolute;
+    border-top: 1px solid #999;
+    margin-left: -16px;
+    left: 50%;
+  }
+  .space-label .top .ring:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+  .space-label .top .ring:nth-child(2) {
+    top: 10px;
+    left: 8px;
+  }
+  .space-label .top .ring:nth-child(3) {
+    top: 20px;
+    left: 16px;
+  }
+  .space-label .top .ring:nth-child(3):after {
+    top: 17px;
+  }
+  .space-label .top .ring:nth-child(3):before {
+    top: 22px;
+  }
+  .space-label .bottom .ring:nth-child(1) {
+    bottom: 0;
+    left: 0;
+  }
+  .space-label .bottom .ring:nth-child(2) {
+    bottom: 10px;
+    left: 8px;
+  }
+  .space-label .bottom .ring:nth-child(3) {
+    bottom: 20px;
+    left: 16px;
+  }
+  .space-label .bottom .ring:nth-child(3):after {
+    bottom: 17px;
+  }
+  .space-label .bottom .ring:nth-child(3):before {
+    bottom: 22px;
+  }
+  .space-label .text {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: #999;
+    height: 55px;
+    vertical-align: middle;
+    display: table-cell;
+    width: 340px;
+    position: relative;
+    left: 7px;
+    letter-spacing: 14px;
+  }
+    #chart {
+    position: relative;
+    background-color: #fff;
+    width: 700px;
+    height: 700px;
+    margin: 0 auto;
+  }
+
+  #card_container {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background-color: #fff;
+    border: 1px solid orange;
+    border-radius: 50%;
+    display: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    pointer-events: none;
+  }
+
+  #card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  #card h2,
+  #card p {
+    margin: 0;
+  }
+
+  #name {
+    font-family: Verlag;
+    font-weight: bold;
+    padding-bottom: 1rem;
+  }
+
+  #team {
+    font-size: 16px;
+  }
+
+  #sub_team,
+  #responsibility {
+    font-size: 14px;
+    font-style: italic;
+  }
+
+  .arc:hover {
+    fill: #0019AF;
+  }
+
+  .circle-person:hover {
+    fill: orange;
+  }
+
+  text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    fill: #fff;
+  }
+# Include footer content here or remove it
+footer: >
+  <footer class="badge">
+      <a href="https://github.com/varya/into-design-systems-2021" target="_blank" rel="noopener">Fork me on GitHub</a>
+  </footer>
+# Include data for generating meta tags
+meta:
+  description: >
+    Shower presentation generator with support of MDX syntax, powered with Next.js
+  cover: ./pictures/round-dance.jpg
+  author: Shower
+  website: https://github.com/varya/shower-mdx
+  twitter: username
+---
+
+
+
+
+## Increasing design system quality and adoption by proper stakeholder management
+{#cover}
+
+<Cover src="pictures/round-dance.jpg" alt=""/>
+
+_Place tizer here_
+
+<div className="gap"></div>
+
+[Varya Stepanova](https://varya.me) @ Smartly DevTalks 2021
+
+<style>{`
+  #cover {
+    padding-left: 60px;
+  }
+  #cover::after {
+    display: none;
+  } 
+  #cover h2 {
+    margin: 60px 0 30px;
+    font-size: 50px;
+    font-family: FF Meta Serif, sans-serif;
+  }
+
+  #cover h3 {
+    width: 50%;
+  }
+
+  #cover p {
+    margin: 10px 0 0;
+    font-style: italic;
+    font-size: 20px;
+    width: 50%;
+    line-height: 1.5em;
+  }
+  #cover .gap {
+    height: 160px;
+  }
+`}</style>
+
+<!--
+Annotation
+
+I will tell about stakeholder management when building and maintaining design systems.
+Through the whole design system workflow, its team communicates to the people across
+the whole company: designers and developers, product managers, and business people.
+Let's see how do we, the design system techies, might make these people happy.
+-->
+
+## Me
+{ .no-title .about-me }
+
+![](pictures/varya.jpg){ .photo }
+
+### Varya Stepanova
+<b>Design Systems Architect</b><br/>
+<small>engineering manager, frontend architect, independent consultant</small>
+
+#### Contacts
+<div className="contacts">
+  <span className="linkedin"></span><a href="https://www.linkedin.com/in/varyastepanova/">linkedin.com/in/varyastepanova</a>
+  <br/>
+  <span className="globe"></span><a href="http://varya.me">varya.me</a>
+  <br/>
+  <span className="twitter"></span><a href="https://twitter.com/varya_en">@varya_en</a>
+</div>
+
+
+<style>{`
+.about-me p {
+  font-size: 80%;
+}
+.about-me .photo {
+  float: left;
+  width: 300px;
+  margin-top: 1em;
+  margin-bottom: 6em;
+  margin-right: 1em;
+  border-radius: 50%;
+}
+
+.about-me h4 {
+  color: #ca4e1f;
+  font: 1em/1 'FF Meta Serif',sans-serif;
+  margin-bottom: .5em;
+}
+.about-me b {
+  font-size: 1.25em;
+}
+
+.about-me .contacts {
+  line-height: 1.5em;
+  font-size: 0.8em;
+}
+
+.about-me .twitter
+{
+  content: "";
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-image:url(pictures/twitter-logo.png);
+  background-size: cover;
+  margin-right: 0.5em;
+  margin-bottom: -0.25em;
+}
+.about-me .linkedin
+{
+  content: "";
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-image:url(pictures/linkedin-logo.png);
+  background-size: cover;
+  margin-right: 0.5em;
+  margin-bottom: -0.25em;
+}
+.about-me .globe
+{
+  content: "";
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-image:url(pictures/globe.png);
+  background-size: 1.15em;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 0.5em;
+  margin-bottom: -0.5em;
+}
+`}</style>
+
+<!--
+
+My name is Varya. I work as an independent consultant, and design systems are my
+major focus. I started with libraries of components about 10 years ago,
+before the term "design systems" even emerged.
+
+By that time, my own understanding and the community's was more technical.
+We were paying a lot of attention to how to code the components,
+how to document them.
+
+Slightly by today, I changed my focus to more process and people oriented.
+I realised that the biggest obstacle on the way is the gap between specialists:
+designers and developers, product people and business people. In the meanwhile
+I got a design education that helped me to see the picture at scale.
+
+Nowadays, even though I am still doing a lot of hands-on and architectural frontend
+work related to the design systems, I shift to engineering&project management, educating,
+and enganging people.
+
+-->
+
+
+## What does design system team do?
+
+## What does design system team REALLY do?
+
+TODO: Triangle picture here
+
+## Communication about design system as a product
+
+- Releases
+- Status map of the components
+
+## Communication about the process
+
+- Backlog policy
+- Votign for the components in JIRA
+- Open planning session
+
+## Word of month
+
+- Onboarding
+  - for designers
+  - for developers
+
+
+## Who is using the component?
+
+- Matrix
+- Display of result in Excel, DataStuido, etc
+- Linking to stakeholders
+
+
+## Stakeholder map
+
+- When someone start
+- On the go
+
+
+## Personalized approach
+
+- Warn about changes
+- Notify about changes
+- Announce the new component
+- Invite for adoption
+
+
+## Innovations - how to go?
+
+- PoCs
+- Asking for feedback
+- Common sessions
+
+
+## How to enchance the contributions?
+
+## Let's look around (optional)
+
+- Design system benchmarking
+- Linking to the contributors
+- Branding
+- Positions in DS team
+
+
+<!--
+
+https://miro.com/app/board/o9J_lhZUe80=/
+
+-->
+
+
+## Up to the business levels
+
+- The money talk
+- Maturity models
+
+
+
+## What the talk is about
+{ .story }
+
+![](pictures/storytelling.png)
+
+<style>{`
+
+.story p {
+  text-align: center;
+}
+.story img {
+  margin-top: 2em;
+  width: 325px;
+}
+
+`}</style>
+
+<!--
+
+This talk is a brief overview of how I mine the data about the design system
+projects I am involved in. And how this data becomes the basis for the
+decisions about the design system's near and distant future.
+
+Due to NDA it was not possible that I share the exact data and screenshots of
+the tools in use. So, I prepared the examples with imaginary data specifically
+for this presentation. And the approach to the data should be quite general.
+So, I hope that more people could kind of pull that to their own context.
+
+-->
+
+
+## How a design system team asked for more resources
+{ .slide--shout .slide--highlighted }
+
+### Based on a true story
+
+<!--
+
+Let me start with the story. The story is based on reality but the the
+characters depicted are fictional and all the matches are random.
+
+-->
+
+
+## team and boss
+{ .no-title }
+
+<Cover src="pictures/it-crowd-team.jpeg" alt=""/>
+<Cover className="next" src="pictures/it-crowd-boss.jpeg" alt=""/>
+
+<!--
+Once upon a time, a design system team realised that their
+backlog is too large for them. They had a lot of great ideas but
+not so much time to implement them. So they went to the money
+guy and asked for more resources. Basically, they wanted that
+the company opens a new position for their team, so that they can hire
+an additional person.
+They were sure that the addition is needed, especially for such a
+great internal product as a design system.
+-->
+
+
+## Actually
+
+### The value of design system is not clear
+Design system is a great thing! But how much exactly?
+
+### Business has no idea how DS is helping
+Everyone has a deisgn system, so do we. How much it helps us? I dunno...
+
+### DS team operates feelings not numbers
+We are doing great! But this is not knowledge supported by data :-(
+
+<!--
+But it turned out that the money guy has different opinion. And it
+was not a problem that their design system was bad, or they didn't
+perform. In a nutshell, the thing was that the business had no idea
+of what they were doing. Yeah, the company had a desing system
+and even financed it because there was already a dedicated team for
+it. But there was no proof of doing well. And even the design system
+team itself only had feelings of what and how well they are doing.
+Feelings, not knowledge supported with any data.
+-->
+
+
+## Growing from seed
+{ .no-title }
+
+<Cover src="pictures/seed.jpg" alt=""/>
+
+<!--
+That story happened to me personally. It is not exact but similar.
+And actually it was years ago but it was the first push towards
+my focus on measuring design systems. That finally grew into something
+bigger than just convincing the money guy.
+-->
+
+## Measuring a design system
+{ .slide--shout .slide--highlighted }
+### Why? What? How?
+
+<!--
+Measuring is a hot topic now. There is already very valuable articles
+and talk about it that explain very well why measuring is important,
+what and how we can measure.
+When I started to work on this presentation, I was also thinking to
+elaborate on these three questions: why? what? and how? I even made
+30 or 40 slides. But perhaps these slides will be used at some other
+time, bacause I asked myself a question "when?".
+-->
+
+
+## When?
+{ .slide--shout .slide--primary }
+
+<!--
+I recollected the story about asking for
+more resources. It was actually a happy end. The position to the
+design system team was opened and they hired whom they wanted.
+
+Thinking of what happened then, how they convinced the business
+people in the company, I realised the following.
+-->
+
+
+## Timeline
+{ .no-title }
+
+<div className="timeline">
+  <div className="timeline__item timeline__item--position-2 next">
+    <div className="timeline__item-name">present</div>
+    <img className="timeline__item-icon" src="pictures/icon__question.png"/>
+  </div>
+  <div className="timeline__item timeline__item--position-1 next">
+    <div className="timeline__item-name">past</div>
+    <img className="timeline__item-icon" src="pictures/icon__parchment.png"/>
+  </div>
+  <div className="timeline__item timeline__item--position-3 next">
+    <div className="timeline__item-name">future</div>
+    <img className="timeline__item-icon" src="pictures/icon__puzzle.png"/>
+  </div>
+</div>
+
+<!--
+
+To get an idea of what we should do now, we
+have to analyse our past and imagine what we aim
+in the future.
+
+When I strated with measuring, I did not expect where it brings me.
+But finally it turned out that when we use data to bridge the past and
+the future, it opens new perspectives in the present. New ways of working,
+new focuses.
+
+But let's see step by step.
+
+-->
+
+<!-- TODO: fix styled components
+<timeline__item>
+present
+</timeline__item>
+-->
+
+
+## Measuring production costs
+{ .slide--shout }
+
+### to reflect, how easier (and more cost-effective) the life is for the projects
+
+<Stamp title="past"/>
+
+<!--
+If we analyse our past, we can measure many things. One of the most obvious
+metrics would be production costs. In short, how much money a design system
+saves us.
+-->
+
+
+## Costs and savings w/o DS
+
+### 1 component, 1 project
+
+```
+$ = production time + (support costs * component lifetime)
+```
+
+### same component, many projects
+```
+$ = (
+    production time + (support costs * component lifetime)
+  ) * amount of projects
+```
+
+## Costs and savings /w DS
+
+### 1 component, in the design system
+
+```
+$ = production time + (support costs * component lifetime)
+```
+
+### same component, at the projects
+```
+$ = integration costs * amount of projects
+```
+
+### altogether
+```
+$ = $(design system) + $(projects)
+```
+
+
+<!--
+Re-using of the components definetely saves us design and development
+time spent. But we cannot just multiply how many times the component
+was used to its one-time costs and say that we saved that much money.
+
+Using a design system costs too. We can work on decreasing these costs
+but anyway we should say out load that linking a library of components
+to the project also requires some work. Reading documentation costs time.
+Possible bugs, repoting them, getting updates with fixes — that all forms
+integration costs.
+
+From design system team, they have to support. So, the more they are offering,
+the more components they serve, the more is the support load.
+
+But luckily we support only one component, thanks to the reuse.
+
+-->
+
+## Where to get this data from?
+
+`production time` — survey, tracker, documented time
+
+`support costs` - estimation
+
+`integration costs` - survey, tracker, documented, estimation
+
+`component lifetime` - git history, data from design files
+
+`amount of projects` - github search, figma data, survey
+
+<!--
+How exactly a team gets the data depends on many factors. Mostly,
+on the shape of their organization and the tools they are using.
+
+If code is stored on in some repository, say GitHub, it is possible to
+obtain the data via search. In my recent project, we were using
+a custom script that crawls across company's GitHub Enterprise and gets
+all the needed data.
+
+With Figma it is a bit more tricky. On Eternprise licenses there is
+some statistics but if we need per component, it is not possible to
+export automatically. Probably it can be done via Figma API but I haven't
+checked. I consider it as a minor problem because these stats snapshots
+are not needed every day. Once a month is already quite often, and we can
+just manually re-write the numbers into some file where we store it.
+
+You can always go with a simpliest version — just to run a survey, so that
+people tell you what kind of components they use. This is already some data.
+-->
+
+
+## Example: button component
+
+```
+production time = 10 h         integration costs = 2h
+support costs = 20 h/year      amount of projects = 5
+component lifetime = 3 years
+```
+
+### costs and savings
+
+```
+$(without ds) = (10h + 20h*3y)*5 = 350h
+$(with ds) = (10h + 20h*3y) + 2h*5 = 80h
+
+SAVED ON THE BUTTON FOR 3 YEARS: 350h - 80h = 270h
+```
+
+## How accurate is that?
+
+The formulas don't have to be perfect.
+
+They help to <u>start a conversation</u>
+with the business.
+
+Together, you will co-create better formulas for your
+paricular organisation.
+
+
+## Costs formula, whole system
+
+<iframe width="100%" height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRS34KLVMHporg-AAxzVYbjXX2GS-DhgKDRUqk4EwiGNnXdow2DFg7EufwwUQj3_L_HV11Y83rJbmba/pubhtml?widget=true&amp;headers=false"></iframe>
+
+### Cost savings: 752 hours = 18.8 weeks = 4 months
+
+
+## WOW{ .shout }
+{ .slide--shout }
+
+
+## Measuring the past
+
+### 1. Production costs
+{ style="margin-bottom: 1.5em;" }
+
+### 2. Availability of a design system
+How easy to start? How fast are updates? Quality of documenttaion. Level
+    of support needed.
+
+### 3. Involvement and contributions
+Design system's acceptance. Level of contributions.
+
+<!--
+Besides the production costs, it is possible to measure many other things
+when looking to the past.
+But keeping the context, let's already forward to the future.
+-->
+
+
+## Measuring the process of DS
+{ .slide--shout}
+
+### to reflect, how DS resources are used and if they correspond to the workload
+
+<Stamp title="future"/>
+
+<!--
+As for the future, we can measure the processes in the design system. here
+we examine how design system resources are used and if they correspond to 
+the workload.
+-->
+
+
+## Workload estimation
+
+### Learn backlog capacity
+"Compund" number, can be obtained from JIRA, GitHub issues, etc.
+
+### Apply given resources
+
+<!--
+The idea is quite straightforward. If we know what we would like to do,
+and we know the given resources, we can prognose if the goal can be achieved.
+
+Again, it is a good idea to use a task tracker. Because this way, the
+workload becomes certain. Some teams that use the task trackers on an advanced
+level can even automatically estimate.
+-->
+
+
+## Let's count our chickens
+
+<iframe width="100%" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTamHd42yH8laeAlPRBxvF7w6BKs_RTx_jCo0wT0v07DsTS76o5sDdCHFmJc2fiSamvC-s8-71_rlqs/pubhtml?widget=true&amp;headers=false"></iframe>
+
+
+## With numbers, we can
+
+* Set up goals
+* Build hypothesis
+* Validate
+* Speak to the business
+
+
+## Timeline
+{ .no-title }
+
+<div className="timeline">
+  <div className="timeline__item timeline__item--position-2">
+    <div className="timeline__item-name">present</div>
+    <img className="timeline__item-icon" src="pictures/icon__negotiation.png"/>
+  </div>
+  <div className="timeline__item timeline__item--position-1">
+    <div className="timeline__item-name">past</div>
+    <img className="timeline__item-icon" src="pictures/icon__parchment.png"/>
+  </div>
+  <div className="timeline__item timeline__item--position-3">
+    <div className="timeline__item-name">future</div>
+    <img className="timeline__item-icon" src="pictures/icon__puzzle.png"/>
+  </div>
+</div>
+
+
+## happy boss
+{ .no-title .happy-boss }
+
+<Cover src="pictures/it-crowd-boss.jpeg" alt=""/>
+
+<div className="smile next">🤩</div>
+
+<div className="money next">
+💰 💰 💰 💰 💰 💰 💰 💰
+</div>
+
+<style>{`
+.happy-boss .smile {
+  font-size: 9em;
+  position: absolute;
+  left: 410px;
+  top: -15px;
+}
+.happy-boss .money {
+  font-size: 3em;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}
+`}</style>
+
+
+## report
+{ .no-title .report }
+
+<Cover src="pictures/it-crowd-boss.jpeg" alt=""/>
+
+<div className="speech-bubble">
+<div className="tip"></div>
+Great numbers! Report to me
+every hour about the dynamics.
+</div>
+
+<style>{`
+.report .speech-bubble {
+	position: absolute;
+  top: 235px;
+  left: 585px;
+  padding: 1em;
+  width: 400px;
+	background: #ffffff;
+	border-radius: .4em;
+  display: inline-block;
+  line-height: 125%;
+}
+
+.report .speech-bubble .tip {
+  display: inline-block;
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-right-color: #ffffff;
+	border-left: 0;
+	border-top: 0;
+	margin-top: -10px;
+	margin-left: -20px;
+}
+`}</style>
+
+
+## Measuring the reality
+{ .slide--shout }
+
+### To get instant guidance towards right direction
+
+<Stamp title="present"/>
+
+<!--
+-->
+
+
+## Same data
+{ .slide--shout .slide--highlighted }
+### But instantly available
+
+
+## Where to store the data?
+
+* Company wiki
+* Intranet website
+* Documenting system
+
+### Was not good for the business people
+{ .next }
+
+
+## Shared office solutions
+
+Excel (cloud) / Google Sheets
+
+### What DS components are used at the projects
+
+```
+Search script (GitHub API) -> CSV -> Excel 
+```
+
+### Other options
+
+```
+Figma stats   ->
+Surveys       ->   Excel
+Code analysis ->
+```
+
+
+## How design system is doing?
+
+<iframe width="100%" height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT9v94Dv2v5lWBvRl6kCw5GfDX-pYupK9XeOaB7TJQgLE_6AUrc-O9ILidl76QL18h8jfxSUz93VElm/pubhtml?widget=true&amp;headers=false"></iframe>
+
+Example link: http://bit.ly/ds-matrix-example
+
+
+## Workflows
+{ .slide--shout .slide--highlighted }
+
+## Workflow examples
+
+* Library has critical updates in particular components
+* Ask teams about upcoming changes
+* Someone is not using the component. Why?
+* Design system team is searching for contributors
+* Team search for other teams using the same component
+
+
+## Stakeholders
+{ .slide--shout .slide--primary-light }
+
+
+## Stakeholders in teams
+
+<iframe width="100%" height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTc_0pL0CmHsQCRuZVZd6Dr8SWjK174-WMO-6IywmuXUaqm5j6-xEqXOpkQuPU5sU-bJ53GiGZo90jF/pubhtml?widget=true&amp;headers=false"></iframe>
+
+### 💡 Color-coded based on the recent survey
+
+## Stakeholders on business levels
+
+<iframe width="100%" height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQNr6G8yo0MPrU1sLKmi1a4q_K7HhR3VhQM0vEwigM6JwIW2NLWkpm0hDPYSkMghYvj1tXQOVlqpJ_6/pubhtml?widget=true&amp;headers=false"></iframe>
+
+
+## Link data and people
+
+<iframe width="100%" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT9v94Dv2v5lWBvRl6kCw5GfDX-pYupK9XeOaB7TJQgLE_6AUrc-O9ILidl76QL18h8jfxSUz93VElm/pubhtml?widget=true&amp;headers=false"></iframe>
+
+
+## Open in-company solution
+
+Data and the tool available for everyone in the company
+
+### For the design system team
+### For the teams to connect
+### For business people
+
+
+## Timeline
+{ .no-title }
+
+<div className="timeline">
+  <div className="timeline__item timeline__item--position-2">
+    <div className="timeline__item-name">present</div>
+    <img className="timeline__item-icon" src="pictures/icon__group.png"/>
+  </div>
+  <div className="timeline__item timeline__item--position-1">
+    <div className="timeline__item-name">past</div>
+    <img className="timeline__item-icon" src="pictures/icon__box.png"/>
+  </div>
+  <div className="timeline__item timeline__item--position-3">
+    <div className="timeline__item-name">future</div>
+    <img className="timeline__item-icon" src="pictures/icon__target.png"/>
+  </div>
+</div>
+
+
+## Who?
+{ .slide--shout .slide--primary }
+
+
+## Get data from people
+
+| at project           | in ds            | at business level
+|----------------------|------------------|------------------
+| how much ds helps?   | production costs | how do we count?
+| integration costs    | support costs    | upcoming challenges
+| ui coverage          | are contributions enough?                 |
+
+### Are you sartisfied?
+### How we could help?
+### Can you help us?
+
+
+## Design Systems are for people
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xlxqbf4s8Tk" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+
+Also available in a [text version](https://publication.design.systems/design-systems-are-for-people-a484620b6988)
+
+## Why? What? How? For whom?
+{ .no-title }
+
+<Blockquote style={{ marginTop: '2em'}} caption={
+  <>
+    Magera Moon,&nbsp;
+    <a href="https://publication.design.systems/design-systems-are-for-people-a484620b6988">
+      The people part of design systems
+    </a>
+  </>
+}>
+Making design systems successful is just as much about creating a people system as it is about creating a technical or operational one.
+</Blockquote>
+
+<Blockquote style={{ marginTop: '2em'}} className="next" caption={
+  <>
+    Ryan DeBeasi,&nbsp;
+    <a href="https://www.smashingmagazine.com/2019/10/design-systems-relationships/">
+      Design Systems Are About Relationships
+    </a>
+  </>
+}>
+To build a design system, don’t start by writing code and choosing tools; <b>start by talking to the people who will use the system</b>. Learn about their needs and constraints, and help them solve problems.
+</Blockquote>
+
+## To boost<br/>a&nbsp;design system {.shout .shout--small .shout--highlighted }
+
+
+## focus on people {.shout .shrink}
+
+
+## connect {.shout}
+{.connect}
+
+### proven with numbers :-)
+{ .next }
+
+<style>{`
+.connect h2 {
+  color: #fff;
+  font-size: 92px;
+  font-family: "ubuntu";
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Josefin Sans", sans-serif;
+  background: linear-gradient(to right, #38bcc2 10%, #ca4e1f 50%, #e69445 60%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 1.5s linear infinite;
+  display: inline-block;
+}
+@keyframes textclip {
+	to {
+		background-position: 200% center;
+	}
+}
+.connect h3 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: 100px;
+  text-align: center;
+  transform: translateY(-50%);
+  width: 100%;
+}
+`}</style>
+
+
+## Thank you
+{ .thanks }
+
+![](pictures/varya.jpg){ .photo }
+
+#### [Slides: varya.me/into-design-systems-2021](https://varya.me/into-design-systems-2021/)
+
+#### by Varya Stepanova
+
+<div className="contacts">
+  <span className="twitter"></span><a href="https://twitter.com/varya_en">@varya_en</a>
+  <br/>
+  <span className="globe"></span><a href="http://varya.me">varya.me</a>
+</div>
+
+### Welcome to [hands-on-workshop.varya.me](https://hands-on-workshop.varya.me/){ .workshop-link }
+
+[Discount code `INTODS`](www.eventbrite.com/e/143823667461/?discount=INTODS){ style="color: #000; background: none;" }
+
+
+#### Credits
+{ .credits__title }
+
+<div className="credits">
+<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</div>
+
+<style>{`
+.thanks .workshop-link {
+  text-transform: lowercase;
+}
+
+.thanks .credits__title {
+  margin-top: 2em;
+}
+.thanks .credits,
+.thanks .credits__title {
+  font-size: 0.5em;
+}
+
+.thanks h3 {
+  font-size: 28px;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+  line-height: 1.25em;
+  font-family: "Graphik Light";
+}
+
+.thanks .slides,
+.thanks .slides a {
+  color: #ca4e1f;
+  font-family: "Graphik Light";
+  text-transform: none;
+}
+
+.thanks .photo {
+  float: left;
+  width: 150px;
+  margin-top: 1em;
+  margin-bottom: 8em;
+  margin-right: 1em;
+  border-radius: 50%;
+}
+
+.thanks .contacts {
+  line-height: 1.5em;
+  font-size: 0.8em;
+}
+.thanks .contacts li:before {
+  content: '';
+}
+
+.thanks .twitter
+{
+  content: "";
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-image:url(pictures/twitter-logo.png);
+  background-size: cover;
+  margin-right: 0.5em;
+  margin-bottom: -0.5em;
+}
+.thanks .globe
+{
+  content: "";
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-image:url(pictures/globe.png);
+  background-size: 1.15em;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 0.5em;
+  margin-bottom: -0.5em;
+}
+`}
+</style>
