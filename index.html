@@ -1,0 +1,490 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><title>Increasing design system quality and adoption by proper stakeholder management</title><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content="Shower presentation generator with support of MDX syntax, powered with Next.js
+"/><meta property="og:url" content="https://github.com/varya/shower-mdx"/><meta property="og:title" content="Increasing design system quality and adoption by proper stakeholder management"/><meta property="og:description" content="Shower presentation generator with support of MDX syntax, powered with Next.js
+"/><meta property="og:image" content="./pictures/round-dance.jpg"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary"/><meta name="twitter:creator" content="username"/><meta name="twitter:site" content="username"/><meta name="twitter:title" content="Increasing design system quality and adoption by proper stakeholder management"/><meta name="twitter:description" content="Shower presentation generator with support of MDX syntax, powered with Next.js
+"/><meta name="twitter:image" content="./pictures/round-dance.jpg"/><meta name="twitter:image:alt" content="Increasing design system quality and adoption by proper stakeholder management"/><style>
+          body {
+            background-color: var(--color-grey);
+          }
+            .shower {
+              --slide-ratio: calc(16 / 9);
+            }
+          body {
+  margin: 0
+} .slide.slide--highlighted h3 {
+  color: white;
+} .no-title h2 {
+  display: none;
+} .slide .shout.shout--small {
+  font-size: 90px;
+} .slide h2.shout--highlighted {
+  color: #38bcc2;
+} .timeline {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  
+  margin-top: 100px;
+} .timeline__item {
+  position: relative;
+
+  background: transparent;
+  padding: 5px;
+  width: 255px;
+  height: 255px;
+  margin: 5px;
+
+  border: tomato 3px solid;
+  
+  line-height: 255px;
+  font-weight: bold;
+  font-size: 5em;
+  text-align: center;
+} .timeline__item-name {
+  position: absolute;
+  top: -16px;
+  left: 75px;
+
+  width: 100px;
+
+  font-size: 24px;
+  line-height: 32px;
+
+  background: white;
+  border: tomato 3px solid;
+} .timeline__item--position-1 {
+  order: 1;
+} .timeline__item--position-2 {
+  order: 2;
+} .timeline__item--position-3 {
+  order: 3;
+} .timeline__item-icon {
+  width: 150px;
+  margin: 52px;
+  margin-top: 45px;
+} .team-top {
+  animation-name: fade;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-direction: alternate;
+} @keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+} .space-label {
+  width: 340px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  line-height: 1em;
+  transform: rotate(15deg);
+} .space-label .top, .space-label .bottom {
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+  width: 170px;
+  margin: 0 auto;
+} .space-label .top .ring, .space-label .bottom .ring {
+  border-radius: 100%;
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  border: 3px solid #999;
+  border-width: 8px;
+} .space-label .top .ring:nth-child(2), .space-label .bottom .ring:nth-child(2) {
+  border-width: 4px;
+  width: 154px;
+} .space-label .top .ring:nth-child(3), .space-label .bottom .ring:nth-child(3) {
+  border-width: 2px;
+  width: 139px;
+} .space-label .top .ring:nth-child(3):after, .space-label .bottom .ring:nth-child(3):after {
+  content: &quot;&quot;;
+  width: 18px;
+  position: absolute;
+  border-top: 1px solid #999;
+  left: 50%;
+  margin-left: -9px;
+} .space-label .top .ring:nth-child(3):before, .space-label .bottom .ring:nth-child(3):before {
+  content: &quot;&quot;;
+  width: 32px;
+  position: absolute;
+  border-top: 1px solid #999;
+  margin-left: -16px;
+  left: 50%;
+} .space-label .top .ring:nth-child(1) {
+  top: 0;
+  left: 0;
+} .space-label .top .ring:nth-child(2) {
+  top: 10px;
+  left: 8px;
+} .space-label .top .ring:nth-child(3) {
+  top: 20px;
+  left: 16px;
+} .space-label .top .ring:nth-child(3):after {
+  top: 17px;
+} .space-label .top .ring:nth-child(3):before {
+  top: 22px;
+} .space-label .bottom .ring:nth-child(1) {
+  bottom: 0;
+  left: 0;
+} .space-label .bottom .ring:nth-child(2) {
+  bottom: 10px;
+  left: 8px;
+} .space-label .bottom .ring:nth-child(3) {
+  bottom: 20px;
+  left: 16px;
+} .space-label .bottom .ring:nth-child(3):after {
+  bottom: 17px;
+} .space-label .bottom .ring:nth-child(3):before {
+  bottom: 22px;
+} .space-label .text {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-size: 42px;
+  font-weight: 900;
+  color: #999;
+  height: 55px;
+  vertical-align: middle;
+  display: table-cell;
+  width: 340px;
+  position: relative;
+  left: 7px;
+  letter-spacing: 14px;
+}
+  #chart {
+  position: relative;
+  background-color: #fff;
+  width: 700px;
+  height: 700px;
+  margin: 0 auto;
+}
+#card_container {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background-color: #fff;
+  border: 1px solid orange;
+  border-radius: 50%;
+  display: none;
+  font-family: sans-serif;
+  font-size: 20px;
+  pointer-events: none;
+}
+#card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+#card h2, #card p {
+  margin: 0;
+}
+#name {
+  font-family: Verlag;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+#team {
+  font-size: 16px;
+}
+#sub_team, #responsibility {
+  font-size: 14px;
+  font-style: italic;
+}
+.arc:hover {
+  fill: #0019AF;
+}
+.circle-person:hover {
+  fill: orange;
+}
+text {
+  font-family: &#x27;Gill Sans&#x27;, &#x27;Gill Sans MT&#x27;, Calibri, &#x27;Trebuchet MS&#x27;, sans-serif;
+  font-size: 12px;
+  fill: #fff;
+}
+</style><meta name="next-head-count" content="17"/><noscript data-n-css=""></noscript><link rel="preload" href="/devtalks-2021/_next/static/chunks/main-fd64a7c379e3faf5684c.js" as="script"/><link rel="preload" href="/devtalks-2021/_next/static/chunks/webpack-e13126a40cf00c3dfbe1.js" as="script"/><link rel="preload" href="/devtalks-2021/_next/static/chunks/framework.abffcf18e526b7c0dbcd.js" as="script"/><link rel="preload" href="/devtalks-2021/_next/static/chunks/f6078781a05fe1bcb0902d23dbbb2662c8d200b3.3b47e6ea509d1f3f254c.js" as="script"/><link rel="preload" href="/devtalks-2021/_next/static/chunks/pages/_app-097de2fc475a62233f79.js" as="script"/><link rel="preload" href="/devtalks-2021/_next/static/chunks/pages/index-f51a2a3308d6a8aad610.js" as="script"/></head><body tabindex="0" class="jsx-521173167"><div id="__next"><div class="shower list" tabindex="-1">
+    <header class="caption">
+      <h1>Increasing design system quality and adoption by proper stakeholder management</h1>
+      
+    </header><section id="cover" class="slide"><h2>Increasing design system quality and adoption by proper stakeholder management</h2><figure><img class="cover" src="pictures/round-dance.jpg" alt=""/><figcaption class="copyright right white"></figcaption></figure><p><em>Place tizer here</em></p><div class="gap"></div><p><a href="https://varya.me">Varya Stepanova</a> @ Smartly DevTalks 2021</p><style>
+  #cover {
+    padding-left: 60px;
+  }
+  #cover::after {
+    display: none;
+  } 
+  #cover h2 {
+    margin: 60px 0 30px;
+    font-size: 50px;
+    font-family: FF Meta Serif, sans-serif;
+  }
+
+  #cover h3 {
+    width: 50%;
+  }
+
+  #cover p {
+    margin: 10px 0 0;
+    font-style: italic;
+    font-size: 20px;
+    width: 50%;
+    line-height: 1.5em;
+  }
+  #cover .gap {
+    height: 160px;
+  }
+</style></section><section class="slide no-title about-me"><h2>Me</h2><p><img src="pictures/varya.jpg" class="photo"/></p><h3>Varya Stepanova</h3><b>Design Systems Architect</b><br/><small>engineering manager, frontend architect, independent consultant</small><h4>Contacts</h4><div class="contacts"><span class="linkedin"></span><a href="https://www.linkedin.com/in/varyastepanova/">linkedin.com/in/varyastepanova</a><br/><span class="globe"></span><a href="http://varya.me">varya.me</a><br/><span class="twitter"></span><a href="https://twitter.com/varya_en">@varya_en</a></div><style>
+.about-me p {
+  font-size: 80%;
+}
+.about-me .photo {
+  float: left;
+  width: 300px;
+  margin-top: 1em;
+  margin-bottom: 6em;
+  margin-right: 1em;
+  border-radius: 50%;
+}
+
+.about-me h4 {
+  color: #ca4e1f;
+  font: 1em/1 &#x27;FF Meta Serif&#x27;,sans-serif;
+  margin-bottom: .5em;
+}
+.about-me b {
+  font-size: 1.25em;
+}
+
+.about-me .contacts {
+  line-height: 1.5em;
+  font-size: 0.8em;
+}
+
+.about-me .twitter
+{
+  content: &quot;&quot;;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-image:url(pictures/twitter-logo.png);
+  background-size: cover;
+  margin-right: 0.5em;
+  margin-bottom: -0.25em;
+}
+.about-me .linkedin
+{
+  content: &quot;&quot;;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-image:url(pictures/linkedin-logo.png);
+  background-size: cover;
+  margin-right: 0.5em;
+  margin-bottom: -0.25em;
+}
+.about-me .globe
+{
+  content: &quot;&quot;;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-image:url(pictures/globe.png);
+  background-size: 1.15em;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 0.5em;
+  margin-bottom: -0.5em;
+}
+</style></section><section class="slide"><h2>What does design system team do?</h2></section><section class="slide"><h2>What does design system team REALLY do?</h2><p>TODO: Triangle picture here</p></section><section class="slide"><h2>Communication about design system as a product</h2><ul><li>Releases</li><li>Status map of the components</li></ul></section><section class="slide"><h2>Communication about the process</h2><ul><li>Backlog policy</li><li>Votign for the components in JIRA</li><li>Open planning session</li></ul></section><section class="slide"><h2>Word of month</h2><ul><li>Onboarding<ul><li>for designers</li><li>for developers</li></ul></li></ul></section><section class="slide"><h2>Who is using the component?</h2><ul><li>Matrix</li><li>Display of result in Excel, DataStuido, etc</li><li>Linking to stakeholders</li></ul></section><section class="slide"><h2>Stakeholder map</h2><ul><li>When someone start</li><li>On the go</li></ul></section><section class="slide"><h2>Personalized approach</h2><ul><li>Warn about changes</li><li>Notify about changes</li><li>Announce the new component</li><li>Invite for adoption</li></ul></section><section class="slide"><h2>Innovations - how to go?</h2><ul><li>PoCs</li><li>Asking for feedback</li><li>Common sessions</li></ul></section><section class="slide"><h2>How to enchance the contributions?</h2></section><section class="slide"><h2>Let&#x27;s look around (optional)</h2><ul><li>Design system benchmarking</li><li>Linking to the contributors</li><li>Branding</li><li>Positions in DS team</li></ul></section><section class="slide"><h2>Up to the business levels</h2><ul><li>The money talk</li><li>Maturity models</li></ul></section><section class="slide story"><h2>What the talk is about</h2><p><img src="pictures/storytelling.png"/></p><style>
+
+.story p {
+  text-align: center;
+}
+.story img {
+  margin-top: 2em;
+  width: 325px;
+}
+
+</style></section><section class="slide slide--shout slide--highlighted"><h2>How a design system team asked for more resources</h2><h3>Based on a true story</h3></section><section class="slide no-title"><h2>team and boss</h2><figure><img class="cover" src="pictures/it-crowd-team.jpeg" alt=""/><figcaption class="copyright right white"></figcaption></figure><figure class="next"><img class="cover" src="pictures/it-crowd-boss.jpeg" alt=""/><figcaption class="copyright right white"></figcaption></figure></section><section class="slide"><h2>Actually</h2><h3>The value of design system is not clear</h3><p>Design system is a great thing! But how much exactly?</p><h3>Business has no idea how DS is helping</h3><p>Everyone has a deisgn system, so do we. How much it helps us? I dunno...</p><h3>DS team operates feelings not numbers</h3><p>We are doing great! But this is not knowledge supported by data :-(</p></section><section class="slide no-title"><h2>Growing from seed</h2><figure><img class="cover" src="pictures/seed.jpg" alt=""/><figcaption class="copyright right white"></figcaption></figure></section><section class="slide slide--shout slide--highlighted"><h2>Measuring a design system</h2><h3>Why? What? How?</h3></section><section class="slide slide--shout slide--primary"><h2>When?</h2></section><section class="slide no-title"><h2>Timeline</h2><div class="timeline"><div class="timeline__item timeline__item--position-2 next"><div class="timeline__item-name">present</div><img class="timeline__item-icon" src="pictures/icon__question.png"/></div><div class="timeline__item timeline__item--position-1 next"><div class="timeline__item-name">past</div><img class="timeline__item-icon" src="pictures/icon__parchment.png"/></div><div class="timeline__item timeline__item--position-3 next"><div class="timeline__item-name">future</div><img class="timeline__item-icon" src="pictures/icon__puzzle.png"/></div></div></section><section class="slide slide--shout"><h2>Measuring production costs</h2><h3>to reflect, how easier (and more cost-effective) the life is for the projects</h3><div class="space-label"><div class="top"><div class="ring"></div><div class="ring"></div><div class="ring"></div></div><div class="text">past</div><div class="bottom"><div class="ring"></div><div class="ring"></div><div class="ring"></div></div></div></section><section class="slide"><h2>Costs and savings w/o DS</h2><h3>1 component, 1 project</h3><pre><code>$ = production time + (support costs * component lifetime)
+</code></pre><h3>same component, many projects</h3><pre><code>$ = (
+    production time + (support costs * component lifetime)
+  ) * amount of projects
+</code></pre></section><section class="slide"><h2>Costs and savings /w DS</h2><h3>1 component, in the design system</h3><pre><code>$ = production time + (support costs * component lifetime)
+</code></pre><h3>same component, at the projects</h3><pre><code>$ = integration costs * amount of projects
+</code></pre><h3>altogether</h3><pre><code>$ = $(design system) + $(projects)
+</code></pre></section><section class="slide"><h2>Where to get this data from?</h2><p><code>production time</code> — survey, tracker, documented time</p><p><code>support costs</code> - estimation</p><p><code>integration costs</code> - survey, tracker, documented, estimation</p><p><code>component lifetime</code> - git history, data from design files</p><p><code>amount of projects</code> - github search, figma data, survey</p></section><section class="slide"><h2>Example: button component</h2><pre><code>production time = 10 h         integration costs = 2h
+support costs = 20 h/year      amount of projects = 5
+component lifetime = 3 years
+</code></pre><h3>costs and savings</h3><pre><code>$(without ds) = (10h + 20h*3y)*5 = 350h
+$(with ds) = (10h + 20h*3y) + 2h*5 = 80h
+
+SAVED ON THE BUTTON FOR 3 YEARS: 350h - 80h = 270h
+</code></pre></section><section class="slide"><h2>How accurate is that?</h2><p>The formulas don&#x27;t have to be perfect.</p><p>They help to <u>start a conversation</u>
+with the business.</p><p>Together, you will co-create better formulas for your
+paricular organisation.</p></section><section class="slide"><h2>Costs formula, whole system</h2><iframe width="100%" height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRS34KLVMHporg-AAxzVYbjXX2GS-DhgKDRUqk4EwiGNnXdow2DFg7EufwwUQj3_L_HV11Y83rJbmba/pubhtml?widget=true&amp;headers=false"></iframe><h3>Cost savings: 752 hours = 18.8 weeks = 4 months</h3></section><section class="slide slide--shout"><h2>WOW{ .shout }</h2></section><section class="slide"><h2>Measuring the past</h2><h3 style="margin-bottom:1.5em">1. Production costs</h3><h3>2. Availability of a design system</h3><p>How easy to start? How fast are updates? Quality of documenttaion. Level
+of support needed.</p><h3>3. Involvement and contributions</h3><p>Design system&#x27;s acceptance. Level of contributions.</p></section><section class="slide slide--shout"><h2>Measuring the process of DS</h2><h3>to reflect, how DS resources are used and if they correspond to the workload</h3><div class="space-label"><div class="top"><div class="ring"></div><div class="ring"></div><div class="ring"></div></div><div class="text">future</div><div class="bottom"><div class="ring"></div><div class="ring"></div><div class="ring"></div></div></div></section><section class="slide"><h2>Workload estimation</h2><h3>Learn backlog capacity</h3><p>&quot;Compund&quot; number, can be obtained from JIRA, GitHub issues, etc.</p><h3>Apply given resources</h3></section><section class="slide"><h2>Let&#x27;s count our chickens</h2><iframe width="100%" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTamHd42yH8laeAlPRBxvF7w6BKs_RTx_jCo0wT0v07DsTS76o5sDdCHFmJc2fiSamvC-s8-71_rlqs/pubhtml?widget=true&amp;headers=false"></iframe></section><section class="slide"><h2>With numbers, we can</h2><ul><li>Set up goals</li><li>Build hypothesis</li><li>Validate</li><li>Speak to the business</li></ul></section><section class="slide no-title"><h2>Timeline</h2><div class="timeline"><div class="timeline__item timeline__item--position-2"><div class="timeline__item-name">present</div><img class="timeline__item-icon" src="pictures/icon__negotiation.png"/></div><div class="timeline__item timeline__item--position-1"><div class="timeline__item-name">past</div><img class="timeline__item-icon" src="pictures/icon__parchment.png"/></div><div class="timeline__item timeline__item--position-3"><div class="timeline__item-name">future</div><img class="timeline__item-icon" src="pictures/icon__puzzle.png"/></div></div></section><section class="slide no-title happy-boss"><h2>happy boss</h2><figure><img class="cover" src="pictures/it-crowd-boss.jpeg" alt=""/><figcaption class="copyright right white"></figcaption></figure><div class="smile next">🤩</div><div class="money next">💰 💰 💰 💰 💰 💰 💰 💰</div><style>
+.happy-boss .smile {
+  font-size: 9em;
+  position: absolute;
+  left: 410px;
+  top: -15px;
+}
+.happy-boss .money {
+  font-size: 3em;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}
+</style></section><section class="slide no-title report"><h2>report</h2><figure><img class="cover" src="pictures/it-crowd-boss.jpeg" alt=""/><figcaption class="copyright right white"></figcaption></figure><div class="speech-bubble"><div class="tip"></div>Great numbers! Report to me every hour about the dynamics.</div><style>
+.report .speech-bubble {
+	position: absolute;
+  top: 235px;
+  left: 585px;
+  padding: 1em;
+  width: 400px;
+	background: #ffffff;
+	border-radius: .4em;
+  display: inline-block;
+  line-height: 125%;
+}
+
+.report .speech-bubble .tip {
+  display: inline-block;
+	content: &#x27;&#x27;;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-right-color: #ffffff;
+	border-left: 0;
+	border-top: 0;
+	margin-top: -10px;
+	margin-left: -20px;
+}
+</style></section><section class="slide slide--shout"><h2>Measuring the reality</h2><h3>To get instant guidance towards right direction</h3><div class="space-label"><div class="top"><div class="ring"></div><div class="ring"></div><div class="ring"></div></div><div class="text">present</div><div class="bottom"><div class="ring"></div><div class="ring"></div><div class="ring"></div></div></div></section><section class="slide slide--shout slide--highlighted"><h2>Same data</h2><h3>But instantly available</h3></section><section class="slide"><h2>Where to store the data?</h2><ul><li>Company wiki</li><li>Intranet website</li><li>Documenting system</li></ul><h3 class="next">Was not good for the business people</h3></section><section class="slide"><h2>Shared office solutions</h2><p>Excel (cloud) / Google Sheets</p><h3>What DS components are used at the projects</h3><pre><code>Search script (GitHub API) -&gt; CSV -&gt; Excel 
+</code></pre><h3>Other options</h3><pre><code>Figma stats   -&gt;
+Surveys       -&gt;   Excel
+Code analysis -&gt;
+</code></pre></section><section class="slide"><h2>How design system is doing?</h2><iframe width="100%" height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT9v94Dv2v5lWBvRl6kCw5GfDX-pYupK9XeOaB7TJQgLE_6AUrc-O9ILidl76QL18h8jfxSUz93VElm/pubhtml?widget=true&amp;headers=false"></iframe><p>Example link: <a href="http://bit.ly/ds-matrix-example">http://bit.ly/ds-matrix-example</a></p></section><section class="slide slide--shout slide--highlighted"><h2>Workflows</h2></section><section class="slide"><h2>Workflow examples</h2><ul><li>Library has critical updates in particular components</li><li>Ask teams about upcoming changes</li><li>Someone is not using the component. Why?</li><li>Design system team is searching for contributors</li><li>Team search for other teams using the same component</li></ul></section><section class="slide slide--shout slide--primary-light"><h2>Stakeholders</h2></section><section class="slide"><h2>Stakeholders in teams</h2><iframe width="100%" height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTc_0pL0CmHsQCRuZVZd6Dr8SWjK174-WMO-6IywmuXUaqm5j6-xEqXOpkQuPU5sU-bJ53GiGZo90jF/pubhtml?widget=true&amp;headers=false"></iframe><h3>💡 Color-coded based on the recent survey</h3></section><section class="slide"><h2>Stakeholders on business levels</h2><iframe width="100%" height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQNr6G8yo0MPrU1sLKmi1a4q_K7HhR3VhQM0vEwigM6JwIW2NLWkpm0hDPYSkMghYvj1tXQOVlqpJ_6/pubhtml?widget=true&amp;headers=false"></iframe></section><section class="slide"><h2>Link data and people</h2><iframe width="100%" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT9v94Dv2v5lWBvRl6kCw5GfDX-pYupK9XeOaB7TJQgLE_6AUrc-O9ILidl76QL18h8jfxSUz93VElm/pubhtml?widget=true&amp;headers=false"></iframe></section><section class="slide"><h2>Open in-company solution</h2><p>Data and the tool available for everyone in the company</p><h3>For the design system team</h3><h3>For the teams to connect</h3><h3>For business people</h3></section><section class="slide no-title"><h2>Timeline</h2><div class="timeline"><div class="timeline__item timeline__item--position-2"><div class="timeline__item-name">present</div><img class="timeline__item-icon" src="pictures/icon__group.png"/></div><div class="timeline__item timeline__item--position-1"><div class="timeline__item-name">past</div><img class="timeline__item-icon" src="pictures/icon__box.png"/></div><div class="timeline__item timeline__item--position-3"><div class="timeline__item-name">future</div><img class="timeline__item-icon" src="pictures/icon__target.png"/></div></div></section><section class="slide slide--shout slide--primary"><h2>Who?</h2></section><section class="slide"><h2>Get data from people</h2><table><thead><tr><th>at project</th><th>in ds</th><th>at business level</th></tr></thead><tbody><tr><td>how much ds helps?</td><td>production costs</td><td>how do we count?</td></tr><tr><td>integration costs</td><td>support costs</td><td>upcoming challenges</td></tr><tr><td>ui coverage</td><td>are contributions enough?</td><td></td></tr></tbody></table><h3>Are you sartisfied?</h3><h3>How we could help?</h3><h3>Can you help us?</h3></section><section class="slide"><h2>Design Systems are for people</h2><iframe width="560" height="315" src="https://www.youtube.com/embed/xlxqbf4s8Tk" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><p>Also available in a <a href="https://publication.design.systems/design-systems-are-for-people-a484620b6988">text version</a></p></section><section class="slide no-title"><h2>Why? What? How? For whom?</h2><figure style="margin-top:2em"><blockquote><p>Making design systems successful is just as much about creating a people system as it is about creating a technical or operational one.</p></blockquote><figcaption>Magera Moon, <a href="https://publication.design.systems/design-systems-are-for-people-a484620b6988">The people part of design systems</a></figcaption></figure><figure class="next" style="margin-top:2em"><blockquote><p>To build a design system, don’t start by writing code and choosing tools; <b>start by talking to the people who will use the system</b>. Learn about their needs and constraints, and help them solve problems.</p></blockquote><figcaption>Ryan DeBeasi, <a href="https://www.smashingmagazine.com/2019/10/design-systems-relationships/">Design Systems Are About Relationships</a></figcaption></figure></section><section class="slide"><h2 class="shout shout--small shout--highlighted">To boost<br/>a<!-- --> <!-- -->design system</h2></section><section class="slide"><h2 class="shout shrink">focus on people</h2></section><section class="slide connect"><h2 class="shout">connect</h2><h3 class="next">proven with numbers :-)</h3><style>
+.connect h2 {
+  color: #fff;
+  font-size: 92px;
+  font-family: &quot;ubuntu&quot;;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: &quot;Josefin Sans&quot;, sans-serif;
+  background: linear-gradient(to right, #38bcc2 10%, #ca4e1f 50%, #e69445 60%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 1.5s linear infinite;
+  display: inline-block;
+}
+@keyframes textclip {
+	to {
+		background-position: 200% center;
+	}
+}
+.connect h3 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: 100px;
+  text-align: center;
+  transform: translateY(-50%);
+  width: 100%;
+}
+</style></section><section class="slide thanks"><h2>Thank you</h2><p><img src="pictures/varya.jpg" class="photo"/></p><h4><a href="https://varya.me/into-design-systems-2021/">Slides: varya.me/into-design-systems-2021</a></h4><h4>by Varya Stepanova</h4><div class="contacts"><span class="twitter"></span><a href="https://twitter.com/varya_en">@varya_en</a><br/><span class="globe"></span><a href="http://varya.me">varya.me</a></div><h3>Welcome to <a href="https://hands-on-workshop.varya.me/" class="workshop-link">hands-on-workshop.varya.me</a></h3><p><a href="www.eventbrite.com/e/143823667461/?discount=INTODS" style="color:#000;background:none">Discount code <code>INTODS</code></a></p><h4 class="credits__title">Credits</h4><div class="credits"><div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></div><style>
+.thanks .workshop-link {
+  text-transform: lowercase;
+}
+
+.thanks .credits__title {
+  margin-top: 2em;
+}
+.thanks .credits,
+.thanks .credits__title {
+  font-size: 0.5em;
+}
+
+.thanks h3 {
+  font-size: 28px;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+  line-height: 1.25em;
+  font-family: &quot;Graphik Light&quot;;
+}
+
+.thanks .slides,
+.thanks .slides a {
+  color: #ca4e1f;
+  font-family: &quot;Graphik Light&quot;;
+  text-transform: none;
+}
+
+.thanks .photo {
+  float: left;
+  width: 150px;
+  margin-top: 1em;
+  margin-bottom: 8em;
+  margin-right: 1em;
+  border-radius: 50%;
+}
+
+.thanks .contacts {
+  line-height: 1.5em;
+  font-size: 0.8em;
+}
+.thanks .contacts li:before {
+  content: &#x27;&#x27;;
+}
+
+.thanks .twitter
+{
+  content: &quot;&quot;;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-image:url(pictures/twitter-logo.png);
+  background-size: cover;
+  margin-right: 0.5em;
+  margin-bottom: -0.5em;
+}
+.thanks .globe
+{
+  content: &quot;&quot;;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-image:url(pictures/globe.png);
+  background-size: 1.15em;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 0.5em;
+  margin-bottom: -0.5em;
+}
+</style></section><footer class="badge">
+    <a href="https://github.com/varya/devtalks-2021" target="_blank" rel="noopener">Fork me on GitHub</a>
+</footer>
+<div class="progress"></div></div></div><script type="text/javascript" src="shower.js" class="jsx-521173167"></script><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"content":"\n    \u003cheader class=\"caption\"\u003e\n      \u003ch1\u003eIncreasing design system quality and adoption by proper stakeholder management\u003c/h1\u003e\n      \n    \u003c/header\u003e\u003csection id=\"cover\" class=\"slide\"\u003e\u003ch2\u003eIncreasing design system quality and adoption by proper stakeholder management\u003c/h2\u003e\u003cfigure\u003e\u003cimg class=\"cover\" src=\"pictures/round-dance.jpg\" alt=\"\"/\u003e\u003cfigcaption class=\"copyright right white\"\u003e\u003c/figcaption\u003e\u003c/figure\u003e\u003cp\u003e\u003cem\u003ePlace tizer here\u003c/em\u003e\u003c/p\u003e\u003cdiv class=\"gap\"\u003e\u003c/div\u003e\u003cp\u003e\u003ca href=\"https://varya.me\"\u003eVarya Stepanova\u003c/a\u003e @ Smartly DevTalks 2021\u003c/p\u003e\u003cstyle\u003e\n  #cover {\n    padding-left: 60px;\n  }\n  #cover::after {\n    display: none;\n  } \n  #cover h2 {\n    margin: 60px 0 30px;\n    font-size: 50px;\n    font-family: FF Meta Serif, sans-serif;\n  }\n\n  #cover h3 {\n    width: 50%;\n  }\n\n  #cover p {\n    margin: 10px 0 0;\n    font-style: italic;\n    font-size: 20px;\n    width: 50%;\n    line-height: 1.5em;\n  }\n  #cover .gap {\n    height: 160px;\n  }\n\u003c/style\u003e\u003c/section\u003e\u003csection class=\"slide no-title about-me\"\u003e\u003ch2\u003eMe\u003c/h2\u003e\u003cp\u003e\u003cimg src=\"pictures/varya.jpg\" class=\"photo\"/\u003e\u003c/p\u003e\u003ch3\u003eVarya Stepanova\u003c/h3\u003e\u003cb\u003eDesign Systems Architect\u003c/b\u003e\u003cbr/\u003e\u003csmall\u003eengineering manager, frontend architect, independent consultant\u003c/small\u003e\u003ch4\u003eContacts\u003c/h4\u003e\u003cdiv class=\"contacts\"\u003e\u003cspan class=\"linkedin\"\u003e\u003c/span\u003e\u003ca href=\"https://www.linkedin.com/in/varyastepanova/\"\u003elinkedin.com/in/varyastepanova\u003c/a\u003e\u003cbr/\u003e\u003cspan class=\"globe\"\u003e\u003c/span\u003e\u003ca href=\"http://varya.me\"\u003evarya.me\u003c/a\u003e\u003cbr/\u003e\u003cspan class=\"twitter\"\u003e\u003c/span\u003e\u003ca href=\"https://twitter.com/varya_en\"\u003e@varya_en\u003c/a\u003e\u003c/div\u003e\u003cstyle\u003e\n.about-me p {\n  font-size: 80%;\n}\n.about-me .photo {\n  float: left;\n  width: 300px;\n  margin-top: 1em;\n  margin-bottom: 6em;\n  margin-right: 1em;\n  border-radius: 50%;\n}\n\n.about-me h4 {\n  color: #ca4e1f;\n  font: 1em/1 \u0026#x27;FF Meta Serif\u0026#x27;,sans-serif;\n  margin-bottom: .5em;\n}\n.about-me b {\n  font-size: 1.25em;\n}\n\n.about-me .contacts {\n  line-height: 1.5em;\n  font-size: 0.8em;\n}\n\n.about-me .twitter\n{\n  content: \u0026quot;\u0026quot;;\n  display: inline-block;\n  width: 1.5em;\n  height: 1.5em;\n  background-image:url(pictures/twitter-logo.png);\n  background-size: cover;\n  margin-right: 0.5em;\n  margin-bottom: -0.25em;\n}\n.about-me .linkedin\n{\n  content: \u0026quot;\u0026quot;;\n  display: inline-block;\n  width: 1.5em;\n  height: 1.5em;\n  background-image:url(pictures/linkedin-logo.png);\n  background-size: cover;\n  margin-right: 0.5em;\n  margin-bottom: -0.25em;\n}\n.about-me .globe\n{\n  content: \u0026quot;\u0026quot;;\n  display: inline-block;\n  width: 1.5em;\n  height: 1.5em;\n  background-image:url(pictures/globe.png);\n  background-size: 1.15em;\n  background-repeat: no-repeat;\n  background-position: center;\n  margin-right: 0.5em;\n  margin-bottom: -0.5em;\n}\n\u003c/style\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eWhat does design system team do?\u003c/h2\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eWhat does design system team REALLY do?\u003c/h2\u003e\u003cp\u003eTODO: Triangle picture here\u003c/p\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eCommunication about design system as a product\u003c/h2\u003e\u003cul\u003e\u003cli\u003eReleases\u003c/li\u003e\u003cli\u003eStatus map of the components\u003c/li\u003e\u003c/ul\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eCommunication about the process\u003c/h2\u003e\u003cul\u003e\u003cli\u003eBacklog policy\u003c/li\u003e\u003cli\u003eVotign for the components in JIRA\u003c/li\u003e\u003cli\u003eOpen planning session\u003c/li\u003e\u003c/ul\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eWord of month\u003c/h2\u003e\u003cul\u003e\u003cli\u003eOnboarding\u003cul\u003e\u003cli\u003efor designers\u003c/li\u003e\u003cli\u003efor developers\u003c/li\u003e\u003c/ul\u003e\u003c/li\u003e\u003c/ul\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eWho is using the component?\u003c/h2\u003e\u003cul\u003e\u003cli\u003eMatrix\u003c/li\u003e\u003cli\u003eDisplay of result in Excel, DataStuido, etc\u003c/li\u003e\u003cli\u003eLinking to stakeholders\u003c/li\u003e\u003c/ul\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eStakeholder map\u003c/h2\u003e\u003cul\u003e\u003cli\u003eWhen someone start\u003c/li\u003e\u003cli\u003eOn the go\u003c/li\u003e\u003c/ul\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003ePersonalized approach\u003c/h2\u003e\u003cul\u003e\u003cli\u003eWarn about changes\u003c/li\u003e\u003cli\u003eNotify about changes\u003c/li\u003e\u003cli\u003eAnnounce the new component\u003c/li\u003e\u003cli\u003eInvite for adoption\u003c/li\u003e\u003c/ul\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eInnovations - how to go?\u003c/h2\u003e\u003cul\u003e\u003cli\u003ePoCs\u003c/li\u003e\u003cli\u003eAsking for feedback\u003c/li\u003e\u003cli\u003eCommon sessions\u003c/li\u003e\u003c/ul\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eHow to enchance the contributions?\u003c/h2\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eLet\u0026#x27;s look around (optional)\u003c/h2\u003e\u003cul\u003e\u003cli\u003eDesign system benchmarking\u003c/li\u003e\u003cli\u003eLinking to the contributors\u003c/li\u003e\u003cli\u003eBranding\u003c/li\u003e\u003cli\u003ePositions in DS team\u003c/li\u003e\u003c/ul\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eUp to the business levels\u003c/h2\u003e\u003cul\u003e\u003cli\u003eThe money talk\u003c/li\u003e\u003cli\u003eMaturity models\u003c/li\u003e\u003c/ul\u003e\u003c/section\u003e\u003csection class=\"slide story\"\u003e\u003ch2\u003eWhat the talk is about\u003c/h2\u003e\u003cp\u003e\u003cimg src=\"pictures/storytelling.png\"/\u003e\u003c/p\u003e\u003cstyle\u003e\n\n.story p {\n  text-align: center;\n}\n.story img {\n  margin-top: 2em;\n  width: 325px;\n}\n\n\u003c/style\u003e\u003c/section\u003e\u003csection class=\"slide slide--shout slide--highlighted\"\u003e\u003ch2\u003eHow a design system team asked for more resources\u003c/h2\u003e\u003ch3\u003eBased on a true story\u003c/h3\u003e\u003c/section\u003e\u003csection class=\"slide no-title\"\u003e\u003ch2\u003eteam and boss\u003c/h2\u003e\u003cfigure\u003e\u003cimg class=\"cover\" src=\"pictures/it-crowd-team.jpeg\" alt=\"\"/\u003e\u003cfigcaption class=\"copyright right white\"\u003e\u003c/figcaption\u003e\u003c/figure\u003e\u003cfigure class=\"next\"\u003e\u003cimg class=\"cover\" src=\"pictures/it-crowd-boss.jpeg\" alt=\"\"/\u003e\u003cfigcaption class=\"copyright right white\"\u003e\u003c/figcaption\u003e\u003c/figure\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eActually\u003c/h2\u003e\u003ch3\u003eThe value of design system is not clear\u003c/h3\u003e\u003cp\u003eDesign system is a great thing! But how much exactly?\u003c/p\u003e\u003ch3\u003eBusiness has no idea how DS is helping\u003c/h3\u003e\u003cp\u003eEveryone has a deisgn system, so do we. How much it helps us? I dunno...\u003c/p\u003e\u003ch3\u003eDS team operates feelings not numbers\u003c/h3\u003e\u003cp\u003eWe are doing great! But this is not knowledge supported by data :-(\u003c/p\u003e\u003c/section\u003e\u003csection class=\"slide no-title\"\u003e\u003ch2\u003eGrowing from seed\u003c/h2\u003e\u003cfigure\u003e\u003cimg class=\"cover\" src=\"pictures/seed.jpg\" alt=\"\"/\u003e\u003cfigcaption class=\"copyright right white\"\u003e\u003c/figcaption\u003e\u003c/figure\u003e\u003c/section\u003e\u003csection class=\"slide slide--shout slide--highlighted\"\u003e\u003ch2\u003eMeasuring a design system\u003c/h2\u003e\u003ch3\u003eWhy? What? How?\u003c/h3\u003e\u003c/section\u003e\u003csection class=\"slide slide--shout slide--primary\"\u003e\u003ch2\u003eWhen?\u003c/h2\u003e\u003c/section\u003e\u003csection class=\"slide no-title\"\u003e\u003ch2\u003eTimeline\u003c/h2\u003e\u003cdiv class=\"timeline\"\u003e\u003cdiv class=\"timeline__item timeline__item--position-2 next\"\u003e\u003cdiv class=\"timeline__item-name\"\u003epresent\u003c/div\u003e\u003cimg class=\"timeline__item-icon\" src=\"pictures/icon__question.png\"/\u003e\u003c/div\u003e\u003cdiv class=\"timeline__item timeline__item--position-1 next\"\u003e\u003cdiv class=\"timeline__item-name\"\u003epast\u003c/div\u003e\u003cimg class=\"timeline__item-icon\" src=\"pictures/icon__parchment.png\"/\u003e\u003c/div\u003e\u003cdiv class=\"timeline__item timeline__item--position-3 next\"\u003e\u003cdiv class=\"timeline__item-name\"\u003efuture\u003c/div\u003e\u003cimg class=\"timeline__item-icon\" src=\"pictures/icon__puzzle.png\"/\u003e\u003c/div\u003e\u003c/div\u003e\u003c/section\u003e\u003csection class=\"slide slide--shout\"\u003e\u003ch2\u003eMeasuring production costs\u003c/h2\u003e\u003ch3\u003eto reflect, how easier (and more cost-effective) the life is for the projects\u003c/h3\u003e\u003cdiv class=\"space-label\"\u003e\u003cdiv class=\"top\"\u003e\u003cdiv class=\"ring\"\u003e\u003c/div\u003e\u003cdiv class=\"ring\"\u003e\u003c/div\u003e\u003cdiv class=\"ring\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv class=\"text\"\u003epast\u003c/div\u003e\u003cdiv class=\"bottom\"\u003e\u003cdiv class=\"ring\"\u003e\u003c/div\u003e\u003cdiv class=\"ring\"\u003e\u003c/div\u003e\u003cdiv class=\"ring\"\u003e\u003c/div\u003e\u003c/div\u003e\u003c/div\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eCosts and savings w/o DS\u003c/h2\u003e\u003ch3\u003e1 component, 1 project\u003c/h3\u003e\u003cpre\u003e\u003ccode\u003e$ = production time + (support costs * component lifetime)\n\u003c/code\u003e\u003c/pre\u003e\u003ch3\u003esame component, many projects\u003c/h3\u003e\u003cpre\u003e\u003ccode\u003e$ = (\n    production time + (support costs * component lifetime)\n  ) * amount of projects\n\u003c/code\u003e\u003c/pre\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eCosts and savings /w DS\u003c/h2\u003e\u003ch3\u003e1 component, in the design system\u003c/h3\u003e\u003cpre\u003e\u003ccode\u003e$ = production time + (support costs * component lifetime)\n\u003c/code\u003e\u003c/pre\u003e\u003ch3\u003esame component, at the projects\u003c/h3\u003e\u003cpre\u003e\u003ccode\u003e$ = integration costs * amount of projects\n\u003c/code\u003e\u003c/pre\u003e\u003ch3\u003ealtogether\u003c/h3\u003e\u003cpre\u003e\u003ccode\u003e$ = $(design system) + $(projects)\n\u003c/code\u003e\u003c/pre\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eWhere to get this data from?\u003c/h2\u003e\u003cp\u003e\u003ccode\u003eproduction time\u003c/code\u003e — survey, tracker, documented time\u003c/p\u003e\u003cp\u003e\u003ccode\u003esupport costs\u003c/code\u003e - estimation\u003c/p\u003e\u003cp\u003e\u003ccode\u003eintegration costs\u003c/code\u003e - survey, tracker, documented, estimation\u003c/p\u003e\u003cp\u003e\u003ccode\u003ecomponent lifetime\u003c/code\u003e - git history, data from design files\u003c/p\u003e\u003cp\u003e\u003ccode\u003eamount of projects\u003c/code\u003e - github search, figma data, survey\u003c/p\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eExample: button component\u003c/h2\u003e\u003cpre\u003e\u003ccode\u003eproduction time = 10 h         integration costs = 2h\nsupport costs = 20 h/year      amount of projects = 5\ncomponent lifetime = 3 years\n\u003c/code\u003e\u003c/pre\u003e\u003ch3\u003ecosts and savings\u003c/h3\u003e\u003cpre\u003e\u003ccode\u003e$(without ds) = (10h + 20h*3y)*5 = 350h\n$(with ds) = (10h + 20h*3y) + 2h*5 = 80h\n\nSAVED ON THE BUTTON FOR 3 YEARS: 350h - 80h = 270h\n\u003c/code\u003e\u003c/pre\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eHow accurate is that?\u003c/h2\u003e\u003cp\u003eThe formulas don\u0026#x27;t have to be perfect.\u003c/p\u003e\u003cp\u003eThey help to \u003cu\u003estart a conversation\u003c/u\u003e\nwith the business.\u003c/p\u003e\u003cp\u003eTogether, you will co-create better formulas for your\nparicular organisation.\u003c/p\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eCosts formula, whole system\u003c/h2\u003e\u003ciframe width=\"100%\" height=\"300\" src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vRS34KLVMHporg-AAxzVYbjXX2GS-DhgKDRUqk4EwiGNnXdow2DFg7EufwwUQj3_L_HV11Y83rJbmba/pubhtml?widget=true\u0026amp;headers=false\"\u003e\u003c/iframe\u003e\u003ch3\u003eCost savings: 752 hours = 18.8 weeks = 4 months\u003c/h3\u003e\u003c/section\u003e\u003csection class=\"slide slide--shout\"\u003e\u003ch2\u003eWOW{ .shout }\u003c/h2\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eMeasuring the past\u003c/h2\u003e\u003ch3 style=\"margin-bottom:1.5em\"\u003e1. Production costs\u003c/h3\u003e\u003ch3\u003e2. Availability of a design system\u003c/h3\u003e\u003cp\u003eHow easy to start? How fast are updates? Quality of documenttaion. Level\nof support needed.\u003c/p\u003e\u003ch3\u003e3. Involvement and contributions\u003c/h3\u003e\u003cp\u003eDesign system\u0026#x27;s acceptance. Level of contributions.\u003c/p\u003e\u003c/section\u003e\u003csection class=\"slide slide--shout\"\u003e\u003ch2\u003eMeasuring the process of DS\u003c/h2\u003e\u003ch3\u003eto reflect, how DS resources are used and if they correspond to the workload\u003c/h3\u003e\u003cdiv class=\"space-label\"\u003e\u003cdiv class=\"top\"\u003e\u003cdiv class=\"ring\"\u003e\u003c/div\u003e\u003cdiv class=\"ring\"\u003e\u003c/div\u003e\u003cdiv class=\"ring\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv class=\"text\"\u003efuture\u003c/div\u003e\u003cdiv class=\"bottom\"\u003e\u003cdiv class=\"ring\"\u003e\u003c/div\u003e\u003cdiv class=\"ring\"\u003e\u003c/div\u003e\u003cdiv class=\"ring\"\u003e\u003c/div\u003e\u003c/div\u003e\u003c/div\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eWorkload estimation\u003c/h2\u003e\u003ch3\u003eLearn backlog capacity\u003c/h3\u003e\u003cp\u003e\u0026quot;Compund\u0026quot; number, can be obtained from JIRA, GitHub issues, etc.\u003c/p\u003e\u003ch3\u003eApply given resources\u003c/h3\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eLet\u0026#x27;s count our chickens\u003c/h2\u003e\u003ciframe width=\"100%\" height=\"400\" src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vTamHd42yH8laeAlPRBxvF7w6BKs_RTx_jCo0wT0v07DsTS76o5sDdCHFmJc2fiSamvC-s8-71_rlqs/pubhtml?widget=true\u0026amp;headers=false\"\u003e\u003c/iframe\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eWith numbers, we can\u003c/h2\u003e\u003cul\u003e\u003cli\u003eSet up goals\u003c/li\u003e\u003cli\u003eBuild hypothesis\u003c/li\u003e\u003cli\u003eValidate\u003c/li\u003e\u003cli\u003eSpeak to the business\u003c/li\u003e\u003c/ul\u003e\u003c/section\u003e\u003csection class=\"slide no-title\"\u003e\u003ch2\u003eTimeline\u003c/h2\u003e\u003cdiv class=\"timeline\"\u003e\u003cdiv class=\"timeline__item timeline__item--position-2\"\u003e\u003cdiv class=\"timeline__item-name\"\u003epresent\u003c/div\u003e\u003cimg class=\"timeline__item-icon\" src=\"pictures/icon__negotiation.png\"/\u003e\u003c/div\u003e\u003cdiv class=\"timeline__item timeline__item--position-1\"\u003e\u003cdiv class=\"timeline__item-name\"\u003epast\u003c/div\u003e\u003cimg class=\"timeline__item-icon\" src=\"pictures/icon__parchment.png\"/\u003e\u003c/div\u003e\u003cdiv class=\"timeline__item timeline__item--position-3\"\u003e\u003cdiv class=\"timeline__item-name\"\u003efuture\u003c/div\u003e\u003cimg class=\"timeline__item-icon\" src=\"pictures/icon__puzzle.png\"/\u003e\u003c/div\u003e\u003c/div\u003e\u003c/section\u003e\u003csection class=\"slide no-title happy-boss\"\u003e\u003ch2\u003ehappy boss\u003c/h2\u003e\u003cfigure\u003e\u003cimg class=\"cover\" src=\"pictures/it-crowd-boss.jpeg\" alt=\"\"/\u003e\u003cfigcaption class=\"copyright right white\"\u003e\u003c/figcaption\u003e\u003c/figure\u003e\u003cdiv class=\"smile next\"\u003e🤩\u003c/div\u003e\u003cdiv class=\"money next\"\u003e💰 💰 💰 💰 💰 💰 💰 💰\u003c/div\u003e\u003cstyle\u003e\n.happy-boss .smile {\n  font-size: 9em;\n  position: absolute;\n  left: 410px;\n  top: -15px;\n}\n.happy-boss .money {\n  font-size: 3em;\n  width: 100%;\n  text-align: center;\n  position: absolute;\n  bottom: -20px;\n  left: 0;\n}\n\u003c/style\u003e\u003c/section\u003e\u003csection class=\"slide no-title report\"\u003e\u003ch2\u003ereport\u003c/h2\u003e\u003cfigure\u003e\u003cimg class=\"cover\" src=\"pictures/it-crowd-boss.jpeg\" alt=\"\"/\u003e\u003cfigcaption class=\"copyright right white\"\u003e\u003c/figcaption\u003e\u003c/figure\u003e\u003cdiv class=\"speech-bubble\"\u003e\u003cdiv class=\"tip\"\u003e\u003c/div\u003eGreat numbers! Report to me every hour about the dynamics.\u003c/div\u003e\u003cstyle\u003e\n.report .speech-bubble {\n\tposition: absolute;\n  top: 235px;\n  left: 585px;\n  padding: 1em;\n  width: 400px;\n\tbackground: #ffffff;\n\tborder-radius: .4em;\n  display: inline-block;\n  line-height: 125%;\n}\n\n.report .speech-bubble .tip {\n  display: inline-block;\n\tcontent: \u0026#x27;\u0026#x27;;\n\tposition: absolute;\n\tleft: 0;\n\ttop: 50%;\n\twidth: 0;\n\theight: 0;\n\tborder: 20px solid transparent;\n\tborder-right-color: #ffffff;\n\tborder-left: 0;\n\tborder-top: 0;\n\tmargin-top: -10px;\n\tmargin-left: -20px;\n}\n\u003c/style\u003e\u003c/section\u003e\u003csection class=\"slide slide--shout\"\u003e\u003ch2\u003eMeasuring the reality\u003c/h2\u003e\u003ch3\u003eTo get instant guidance towards right direction\u003c/h3\u003e\u003cdiv class=\"space-label\"\u003e\u003cdiv class=\"top\"\u003e\u003cdiv class=\"ring\"\u003e\u003c/div\u003e\u003cdiv class=\"ring\"\u003e\u003c/div\u003e\u003cdiv class=\"ring\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv class=\"text\"\u003epresent\u003c/div\u003e\u003cdiv class=\"bottom\"\u003e\u003cdiv class=\"ring\"\u003e\u003c/div\u003e\u003cdiv class=\"ring\"\u003e\u003c/div\u003e\u003cdiv class=\"ring\"\u003e\u003c/div\u003e\u003c/div\u003e\u003c/div\u003e\u003c/section\u003e\u003csection class=\"slide slide--shout slide--highlighted\"\u003e\u003ch2\u003eSame data\u003c/h2\u003e\u003ch3\u003eBut instantly available\u003c/h3\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eWhere to store the data?\u003c/h2\u003e\u003cul\u003e\u003cli\u003eCompany wiki\u003c/li\u003e\u003cli\u003eIntranet website\u003c/li\u003e\u003cli\u003eDocumenting system\u003c/li\u003e\u003c/ul\u003e\u003ch3 class=\"next\"\u003eWas not good for the business people\u003c/h3\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eShared office solutions\u003c/h2\u003e\u003cp\u003eExcel (cloud) / Google Sheets\u003c/p\u003e\u003ch3\u003eWhat DS components are used at the projects\u003c/h3\u003e\u003cpre\u003e\u003ccode\u003eSearch script (GitHub API) -\u0026gt; CSV -\u0026gt; Excel \n\u003c/code\u003e\u003c/pre\u003e\u003ch3\u003eOther options\u003c/h3\u003e\u003cpre\u003e\u003ccode\u003eFigma stats   -\u0026gt;\nSurveys       -\u0026gt;   Excel\nCode analysis -\u0026gt;\n\u003c/code\u003e\u003c/pre\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eHow design system is doing?\u003c/h2\u003e\u003ciframe width=\"100%\" height=\"300\" src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vT9v94Dv2v5lWBvRl6kCw5GfDX-pYupK9XeOaB7TJQgLE_6AUrc-O9ILidl76QL18h8jfxSUz93VElm/pubhtml?widget=true\u0026amp;headers=false\"\u003e\u003c/iframe\u003e\u003cp\u003eExample link: \u003ca href=\"http://bit.ly/ds-matrix-example\"\u003ehttp://bit.ly/ds-matrix-example\u003c/a\u003e\u003c/p\u003e\u003c/section\u003e\u003csection class=\"slide slide--shout slide--highlighted\"\u003e\u003ch2\u003eWorkflows\u003c/h2\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eWorkflow examples\u003c/h2\u003e\u003cul\u003e\u003cli\u003eLibrary has critical updates in particular components\u003c/li\u003e\u003cli\u003eAsk teams about upcoming changes\u003c/li\u003e\u003cli\u003eSomeone is not using the component. Why?\u003c/li\u003e\u003cli\u003eDesign system team is searching for contributors\u003c/li\u003e\u003cli\u003eTeam search for other teams using the same component\u003c/li\u003e\u003c/ul\u003e\u003c/section\u003e\u003csection class=\"slide slide--shout slide--primary-light\"\u003e\u003ch2\u003eStakeholders\u003c/h2\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eStakeholders in teams\u003c/h2\u003e\u003ciframe width=\"100%\" height=\"300\" src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vTc_0pL0CmHsQCRuZVZd6Dr8SWjK174-WMO-6IywmuXUaqm5j6-xEqXOpkQuPU5sU-bJ53GiGZo90jF/pubhtml?widget=true\u0026amp;headers=false\"\u003e\u003c/iframe\u003e\u003ch3\u003e💡 Color-coded based on the recent survey\u003c/h3\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eStakeholders on business levels\u003c/h2\u003e\u003ciframe width=\"100%\" height=\"300\" src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vQNr6G8yo0MPrU1sLKmi1a4q_K7HhR3VhQM0vEwigM6JwIW2NLWkpm0hDPYSkMghYvj1tXQOVlqpJ_6/pubhtml?widget=true\u0026amp;headers=false\"\u003e\u003c/iframe\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eLink data and people\u003c/h2\u003e\u003ciframe width=\"100%\" height=\"400\" src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vT9v94Dv2v5lWBvRl6kCw5GfDX-pYupK9XeOaB7TJQgLE_6AUrc-O9ILidl76QL18h8jfxSUz93VElm/pubhtml?widget=true\u0026amp;headers=false\"\u003e\u003c/iframe\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eOpen in-company solution\u003c/h2\u003e\u003cp\u003eData and the tool available for everyone in the company\u003c/p\u003e\u003ch3\u003eFor the design system team\u003c/h3\u003e\u003ch3\u003eFor the teams to connect\u003c/h3\u003e\u003ch3\u003eFor business people\u003c/h3\u003e\u003c/section\u003e\u003csection class=\"slide no-title\"\u003e\u003ch2\u003eTimeline\u003c/h2\u003e\u003cdiv class=\"timeline\"\u003e\u003cdiv class=\"timeline__item timeline__item--position-2\"\u003e\u003cdiv class=\"timeline__item-name\"\u003epresent\u003c/div\u003e\u003cimg class=\"timeline__item-icon\" src=\"pictures/icon__group.png\"/\u003e\u003c/div\u003e\u003cdiv class=\"timeline__item timeline__item--position-1\"\u003e\u003cdiv class=\"timeline__item-name\"\u003epast\u003c/div\u003e\u003cimg class=\"timeline__item-icon\" src=\"pictures/icon__box.png\"/\u003e\u003c/div\u003e\u003cdiv class=\"timeline__item timeline__item--position-3\"\u003e\u003cdiv class=\"timeline__item-name\"\u003efuture\u003c/div\u003e\u003cimg class=\"timeline__item-icon\" src=\"pictures/icon__target.png\"/\u003e\u003c/div\u003e\u003c/div\u003e\u003c/section\u003e\u003csection class=\"slide slide--shout slide--primary\"\u003e\u003ch2\u003eWho?\u003c/h2\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eGet data from people\u003c/h2\u003e\u003ctable\u003e\u003cthead\u003e\u003ctr\u003e\u003cth\u003eat project\u003c/th\u003e\u003cth\u003ein ds\u003c/th\u003e\u003cth\u003eat business level\u003c/th\u003e\u003c/tr\u003e\u003c/thead\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003ehow much ds helps?\u003c/td\u003e\u003ctd\u003eproduction costs\u003c/td\u003e\u003ctd\u003ehow do we count?\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eintegration costs\u003c/td\u003e\u003ctd\u003esupport costs\u003c/td\u003e\u003ctd\u003eupcoming challenges\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eui coverage\u003c/td\u003e\u003ctd\u003eare contributions enough?\u003c/td\u003e\u003ctd\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003ch3\u003eAre you sartisfied?\u003c/h3\u003e\u003ch3\u003eHow we could help?\u003c/h3\u003e\u003ch3\u003eCan you help us?\u003c/h3\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2\u003eDesign Systems are for people\u003c/h2\u003e\u003ciframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/xlxqbf4s8Tk\" frameBorder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"\u003e\u003c/iframe\u003e\u003cp\u003eAlso available in a \u003ca href=\"https://publication.design.systems/design-systems-are-for-people-a484620b6988\"\u003etext version\u003c/a\u003e\u003c/p\u003e\u003c/section\u003e\u003csection class=\"slide no-title\"\u003e\u003ch2\u003eWhy? What? How? For whom?\u003c/h2\u003e\u003cfigure style=\"margin-top:2em\"\u003e\u003cblockquote\u003e\u003cp\u003eMaking design systems successful is just as much about creating a people system as it is about creating a technical or operational one.\u003c/p\u003e\u003c/blockquote\u003e\u003cfigcaption\u003eMagera Moon, \u003ca href=\"https://publication.design.systems/design-systems-are-for-people-a484620b6988\"\u003eThe people part of design systems\u003c/a\u003e\u003c/figcaption\u003e\u003c/figure\u003e\u003cfigure class=\"next\" style=\"margin-top:2em\"\u003e\u003cblockquote\u003e\u003cp\u003eTo build a design system, don’t start by writing code and choosing tools; \u003cb\u003estart by talking to the people who will use the system\u003c/b\u003e. Learn about their needs and constraints, and help them solve problems.\u003c/p\u003e\u003c/blockquote\u003e\u003cfigcaption\u003eRyan DeBeasi, \u003ca href=\"https://www.smashingmagazine.com/2019/10/design-systems-relationships/\"\u003eDesign Systems Are About Relationships\u003c/a\u003e\u003c/figcaption\u003e\u003c/figure\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2 class=\"shout shout--small shout--highlighted\"\u003eTo boost\u003cbr/\u003ea\u003c!-- --\u003e \u003c!-- --\u003edesign system\u003c/h2\u003e\u003c/section\u003e\u003csection class=\"slide\"\u003e\u003ch2 class=\"shout shrink\"\u003efocus on people\u003c/h2\u003e\u003c/section\u003e\u003csection class=\"slide connect\"\u003e\u003ch2 class=\"shout\"\u003econnect\u003c/h2\u003e\u003ch3 class=\"next\"\u003eproven with numbers :-)\u003c/h3\u003e\u003cstyle\u003e\n.connect h2 {\n  color: #fff;\n  font-size: 92px;\n  font-family: \u0026quot;ubuntu\u0026quot;;\n  text-transform: uppercase;\n  font-weight: 700;\n  font-family: \u0026quot;Josefin Sans\u0026quot;, sans-serif;\n  background: linear-gradient(to right, #38bcc2 10%, #ca4e1f 50%, #e69445 60%);\n  background-size: auto auto;\n  background-clip: border-box;\n  background-size: 200% auto;\n  color: #fff;\n  background-clip: text;\n  text-fill-color: transparent;\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  animation: textclip 1.5s linear infinite;\n  display: inline-block;\n}\n@keyframes textclip {\n\tto {\n\t\tbackground-position: 200% center;\n\t}\n}\n.connect h3 {\n  position: absolute;\n  top: 50%;\n  left: 0;\n  margin-top: 100px;\n  text-align: center;\n  transform: translateY(-50%);\n  width: 100%;\n}\n\u003c/style\u003e\u003c/section\u003e\u003csection class=\"slide thanks\"\u003e\u003ch2\u003eThank you\u003c/h2\u003e\u003cp\u003e\u003cimg src=\"pictures/varya.jpg\" class=\"photo\"/\u003e\u003c/p\u003e\u003ch4\u003e\u003ca href=\"https://varya.me/into-design-systems-2021/\"\u003eSlides: varya.me/into-design-systems-2021\u003c/a\u003e\u003c/h4\u003e\u003ch4\u003eby Varya Stepanova\u003c/h4\u003e\u003cdiv class=\"contacts\"\u003e\u003cspan class=\"twitter\"\u003e\u003c/span\u003e\u003ca href=\"https://twitter.com/varya_en\"\u003e@varya_en\u003c/a\u003e\u003cbr/\u003e\u003cspan class=\"globe\"\u003e\u003c/span\u003e\u003ca href=\"http://varya.me\"\u003evarya.me\u003c/a\u003e\u003c/div\u003e\u003ch3\u003eWelcome to \u003ca href=\"https://hands-on-workshop.varya.me/\" class=\"workshop-link\"\u003ehands-on-workshop.varya.me\u003c/a\u003e\u003c/h3\u003e\u003cp\u003e\u003ca href=\"www.eventbrite.com/e/143823667461/?discount=INTODS\" style=\"color:#000;background:none\"\u003eDiscount code \u003ccode\u003eINTODS\u003c/code\u003e\u003c/a\u003e\u003c/p\u003e\u003ch4 class=\"credits__title\"\u003eCredits\u003c/h4\u003e\u003cdiv class=\"credits\"\u003e\u003cdiv\u003eIcons made by \u003ca href=\"https://www.freepik.com\" title=\"Freepik\"\u003eFreepik\u003c/a\u003e from \u003ca href=\"https://www.flaticon.com/\" title=\"Flaticon\"\u003ewww.flaticon.com\u003c/a\u003e\u003c/div\u003e\u003c/div\u003e\u003cstyle\u003e\n.thanks .workshop-link {\n  text-transform: lowercase;\n}\n\n.thanks .credits__title {\n  margin-top: 2em;\n}\n.thanks .credits,\n.thanks .credits__title {\n  font-size: 0.5em;\n}\n\n.thanks h3 {\n  font-size: 28px;\n  margin-bottom: 0.5em;\n  margin-top: 1em;\n  line-height: 1.25em;\n  font-family: \u0026quot;Graphik Light\u0026quot;;\n}\n\n.thanks .slides,\n.thanks .slides a {\n  color: #ca4e1f;\n  font-family: \u0026quot;Graphik Light\u0026quot;;\n  text-transform: none;\n}\n\n.thanks .photo {\n  float: left;\n  width: 150px;\n  margin-top: 1em;\n  margin-bottom: 8em;\n  margin-right: 1em;\n  border-radius: 50%;\n}\n\n.thanks .contacts {\n  line-height: 1.5em;\n  font-size: 0.8em;\n}\n.thanks .contacts li:before {\n  content: \u0026#x27;\u0026#x27;;\n}\n\n.thanks .twitter\n{\n  content: \u0026quot;\u0026quot;;\n  display: inline-block;\n  width: 1.5em;\n  height: 1.5em;\n  background-image:url(pictures/twitter-logo.png);\n  background-size: cover;\n  margin-right: 0.5em;\n  margin-bottom: -0.5em;\n}\n.thanks .globe\n{\n  content: \u0026quot;\u0026quot;;\n  display: inline-block;\n  width: 1.5em;\n  height: 1.5em;\n  background-image:url(pictures/globe.png);\n  background-size: 1.15em;\n  background-repeat: no-repeat;\n  background-position: center;\n  margin-right: 0.5em;\n  margin-bottom: -0.5em;\n}\n\u003c/style\u003e\u003c/section\u003e\u003cfooter class=\"badge\"\u003e\n    \u003ca href=\"https://github.com/varya/devtalks-2021\" target=\"_blank\" rel=\"noopener\"\u003eFork me on GitHub\u003c/a\u003e\n\u003c/footer\u003e\n\u003cdiv class=\"progress\"\u003e\u003c/div\u003e","frontMatter":{"title":"Increasing design system quality and adoption by proper stakeholder management","style":"body {\n  margin: 0\n} .slide.slide--highlighted h3 {\n  color: white;\n} .no-title h2 {\n  display: none;\n} .slide .shout.shout--small {\n  font-size: 90px;\n} .slide h2.shout--highlighted {\n  color: #38bcc2;\n} .timeline {\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: row;\n  \n  margin-top: 100px;\n} .timeline__item {\n  position: relative;\n\n  background: transparent;\n  padding: 5px;\n  width: 255px;\n  height: 255px;\n  margin: 5px;\n\n  border: tomato 3px solid;\n  \n  line-height: 255px;\n  font-weight: bold;\n  font-size: 5em;\n  text-align: center;\n} .timeline__item-name {\n  position: absolute;\n  top: -16px;\n  left: 75px;\n\n  width: 100px;\n\n  font-size: 24px;\n  line-height: 32px;\n\n  background: white;\n  border: tomato 3px solid;\n} .timeline__item--position-1 {\n  order: 1;\n} .timeline__item--position-2 {\n  order: 2;\n} .timeline__item--position-3 {\n  order: 3;\n} .timeline__item-icon {\n  width: 150px;\n  margin: 52px;\n  margin-top: 45px;\n} .team-top {\n  animation-name: fade;\n  animation-timing-function: ease-in-out;\n  animation-iteration-count: infinite;\n  animation-duration: 3s;\n  animation-direction: alternate;\n} @keyframes fade {\n  0% {\n    opacity: 1;\n  }\n  25% {\n    opacity: 1;\n  }\n  75% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 0;\n  }\n} .space-label {\n  width: 340px;\n  margin: 0 auto;\n  position: absolute;\n  top: 50px;\n  right: 0;\n  line-height: 1em;\n  transform: rotate(15deg);\n} .space-label .top, .space-label .bottom {\n  height: 60px;\n  overflow: hidden;\n  position: relative;\n  width: 170px;\n  margin: 0 auto;\n} .space-label .top .ring, .space-label .bottom .ring {\n  border-radius: 100%;\n  position: absolute;\n  width: 170px;\n  height: 170px;\n  border: 3px solid #999;\n  border-width: 8px;\n} .space-label .top .ring:nth-child(2), .space-label .bottom .ring:nth-child(2) {\n  border-width: 4px;\n  width: 154px;\n} .space-label .top .ring:nth-child(3), .space-label .bottom .ring:nth-child(3) {\n  border-width: 2px;\n  width: 139px;\n} .space-label .top .ring:nth-child(3):after, .space-label .bottom .ring:nth-child(3):after {\n  content: \"\";\n  width: 18px;\n  position: absolute;\n  border-top: 1px solid #999;\n  left: 50%;\n  margin-left: -9px;\n} .space-label .top .ring:nth-child(3):before, .space-label .bottom .ring:nth-child(3):before {\n  content: \"\";\n  width: 32px;\n  position: absolute;\n  border-top: 1px solid #999;\n  margin-left: -16px;\n  left: 50%;\n} .space-label .top .ring:nth-child(1) {\n  top: 0;\n  left: 0;\n} .space-label .top .ring:nth-child(2) {\n  top: 10px;\n  left: 8px;\n} .space-label .top .ring:nth-child(3) {\n  top: 20px;\n  left: 16px;\n} .space-label .top .ring:nth-child(3):after {\n  top: 17px;\n} .space-label .top .ring:nth-child(3):before {\n  top: 22px;\n} .space-label .bottom .ring:nth-child(1) {\n  bottom: 0;\n  left: 0;\n} .space-label .bottom .ring:nth-child(2) {\n  bottom: 10px;\n  left: 8px;\n} .space-label .bottom .ring:nth-child(3) {\n  bottom: 20px;\n  left: 16px;\n} .space-label .bottom .ring:nth-child(3):after {\n  bottom: 17px;\n} .space-label .bottom .ring:nth-child(3):before {\n  bottom: 22px;\n} .space-label .text {\n  text-align: center;\n  text-transform: uppercase;\n  font-family: \"Raleway\", sans-serif;\n  font-size: 42px;\n  font-weight: 900;\n  color: #999;\n  height: 55px;\n  vertical-align: middle;\n  display: table-cell;\n  width: 340px;\n  position: relative;\n  left: 7px;\n  letter-spacing: 14px;\n}\n  #chart {\n  position: relative;\n  background-color: #fff;\n  width: 700px;\n  height: 700px;\n  margin: 0 auto;\n}\n#card_container {\n  position: absolute;\n  width: 450px;\n  height: 450px;\n  background-color: #fff;\n  border: 1px solid orange;\n  border-radius: 50%;\n  display: none;\n  font-family: sans-serif;\n  font-size: 20px;\n  pointer-events: none;\n}\n#card {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n}\n#card h2, #card p {\n  margin: 0;\n}\n#name {\n  font-family: Verlag;\n  font-weight: bold;\n  padding-bottom: 1rem;\n}\n#team {\n  font-size: 16px;\n}\n#sub_team, #responsibility {\n  font-size: 14px;\n  font-style: italic;\n}\n.arc:hover {\n  fill: #0019AF;\n}\n.circle-person:hover {\n  fill: orange;\n}\ntext {\n  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;\n  font-size: 12px;\n  fill: #fff;\n}\n","footer":"\u003cfooter class=\"badge\"\u003e\n    \u003ca href=\"https://github.com/varya/devtalks-2021\" target=\"_blank\" rel=\"noopener\"\u003eFork me on GitHub\u003c/a\u003e\n\u003c/footer\u003e\n","meta":{"description":"Shower presentation generator with support of MDX syntax, powered with Next.js\n","cover":"./pictures/round-dance.jpg","author":"Shower","website":"https://github.com/varya/shower-mdx","twitter":"username"}}},"__N_SSG":true},"page":"/","query":{},"buildId":"EqUbKNV1HqKBDH5hzZ39L","assetPrefix":"/devtalks-2021","nextExport":false,"isFallback":false,"gsp":true}</script><script nomodule="" src="/devtalks-2021/_next/static/chunks/polyfills-aa54647e89713304033b.js"></script><script src="/devtalks-2021/_next/static/chunks/main-fd64a7c379e3faf5684c.js" async=""></script><script src="/devtalks-2021/_next/static/chunks/webpack-e13126a40cf00c3dfbe1.js" async=""></script><script src="/devtalks-2021/_next/static/chunks/framework.abffcf18e526b7c0dbcd.js" async=""></script><script src="/devtalks-2021/_next/static/chunks/f6078781a05fe1bcb0902d23dbbb2662c8d200b3.3b47e6ea509d1f3f254c.js" async=""></script><script src="/devtalks-2021/_next/static/chunks/pages/_app-097de2fc475a62233f79.js" async=""></script><script src="/devtalks-2021/_next/static/chunks/pages/index-f51a2a3308d6a8aad610.js" async=""></script><script src="/devtalks-2021/_next/static/EqUbKNV1HqKBDH5hzZ39L/_buildManifest.js" async=""></script><script src="/devtalks-2021/_next/static/EqUbKNV1HqKBDH5hzZ39L/_ssgManifest.js" async=""></script></body></html>
